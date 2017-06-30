@@ -7,7 +7,7 @@
 <body>
 	<div id="app" style="">
 		<label for="uName">用户名：</label>
-		<input type="text" id="uName" v-model="userName">
+		<input type="text" id="uName" v-model="userName" v-on:blur="judge">
 		<div v-if="uFlag">{{status}}</div><br>
 		<label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
 		<input type="password" id="pass"><br>
