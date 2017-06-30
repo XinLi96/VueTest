@@ -12,6 +12,9 @@
 		<label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
 		<input type="password" id="pass" v-model="password" v-on:blur="judge"><br>
 	</div>
+	<div id="app1">
+		<li v-for="n in 10">{{n}}</li>
+	</div>
 	<script src="./js/Vue.js"></script>
 	<script>
 		var app = new Vue({
@@ -37,6 +40,12 @@
 				}
 			}
 		});
+		var app1 = new Vue({
+			el: '#app1',
+			data: {
+				
+			}
+		})
 	</script>
 </body>
 </html>
