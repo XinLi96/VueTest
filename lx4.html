@@ -10,8 +10,7 @@
 		<input type="text" id="uName" v-model="userName" v-on:blur="judge">
 		<div v-if="uFlag">{{status}}</div><br>
 		<label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-		<input type="password" id="pass"><br>
-		<input type="button" value="检测" v-on:click="judge">
+		<input type="password" id="pass" v-model="password" v-on:blur="judge"><br>
 	</div>
 	<script src="./js/Vue.js"></script>
 	<script>
@@ -20,7 +19,8 @@
 			data: {
 				userName: 'lixin',
 				uFlag: true,
-				status: 'success'
+				status: 'success',
+				password: ''
 			},
 			methods: {
 				judge: function(){
@@ -28,6 +28,11 @@
 						this.status = 'success';
 					}else{
 						this.status = 'fail';
+					}
+					if(this.password == '123'){
+						
+					}else{
+						this.password = '输入错误！';
 					}
 				}
 			}
