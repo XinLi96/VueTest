@@ -27,7 +27,32 @@
 					{ text : '随便。。。' }
 				]
 			}
-		})
+		});
+		var data = {a: 1};
+		var vm = new Vue({
+			data: data
+		});
+		console.log(vm.a === data.a);
+		vm.a = 2;
+		console.log(data.a);
+
+		var vm = new Vue({
+			data: {
+				a: 1
+			},
+			created: function(){
+				console.log('a is: ' + this.a);
+			},
+			beforeCreate: function(){
+				console.log('beforeCreate');
+			},
+			beforeMount: function(){
+				console.log('beforeMount');
+			},
+			mounted: function(){
+				console.log('mounted');
+			}
+		});
 	</script>
 </body>
 </html>
