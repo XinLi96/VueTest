@@ -6,22 +6,32 @@
 </head>
 <body>
 	<div id="app" style="">
-		<label for="in">用户名：</label>
-		<input type="text" id="in" v-model="">
-		<div v-if="userName"></div><br>
+		<label for="uName">用户名：</label>
+		<input type="text" id="uName" v-model="userName">
+		<div v-if="uFlag">{{status}}</div><br>
 		<label for="pass">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
-		<input type="text" id="pass">
+		<input type="password" id="pass"><br>
+		<input type="button" value="检测" v-on:click="judge">
 	</div>
 	<script src="./js/Vue.js"></script>
 	<script>
 		var app = new Vue({
 			el: '#app',
 			data: {
-				userName: ''
+				userName: 'lixin',
+				uFlag: true,
+				status: 'success'
 			},
-
-			method:
-		})
+			methods: {
+				judge: function(){
+					if(this.userName == 'lixin'){
+						this.status = 'success';
+					}else{
+						this.status = 'fail';
+					}
+				}
+			}
+		});
 	</script>
 </body>
 </html>
