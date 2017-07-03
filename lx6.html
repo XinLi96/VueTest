@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="example">
+		<button v-on:click="greet">greet</button>
+		<button v-on:click="say('hi')">Say hi</button>
+		<button v-on:click="say('what')">Say what</button>
+	</div>
+	<div id="app">
+		<input type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{checked}}</label>
+	</div>
+	<script src="./js/vue.js"></script>
+	<script>
+		var example = new Vue({
+			el: '#example',
+			data: {
+				name: 'Vue.js'
+			},
+			methods: {
+				greet: function(event){
+					alert('Hello ' + this.name + ' !');
+					if(event){
+						alert(event.target.tagName);
+					}
+				},
+				say: function(message){
+					alert(message);
+				}
+			}
+		});
+		// example.greet();
+		var app = new Vue({
+			el: '#app',
+			data: {
+				checked: false
+			}
+		})
+	</script>
+</body>
+</html>
