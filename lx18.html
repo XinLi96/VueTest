@@ -20,6 +20,22 @@
 		}
 		var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
 		console.log(arr.unique());
+
+		 var array = [1,2,,,4,6,,,,,,55];
+		  
+		 alert(array)
+		 for(var i = 0 ;i<array.length;i++)
+		 {
+		             if(array[i] == "" || typeof(array[i]) == "undefined")
+		             {
+		                      array.splice(i,1);
+		                      i= i-1;
+		                  
+		             }
+		              
+		 }
+		  
+		 alert(array)
 	</script>
 </body>
 </html>
