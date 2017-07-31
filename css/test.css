@@ -2,3 +2,19 @@
 	margin: 0;
 	padding: 0;
 }
+#main{
+	width: 100px;
+	height: 200px;
+	.ds{
+		color: red;
+		font-size: 10px;
+	}
+	.sa{
+		width: 20px;
+		height: 20px;
+	}
+	font:{
+		family: '微软雅黑';
+		size: 20rem;
+	}
+}

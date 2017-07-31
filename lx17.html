@@ -22,8 +22,51 @@
 			alert(x);
 		})(1+5);//6
 */
-		console.log([]==[]);//false
-		console.log(NaN == NaN);//false
+		// console.log([]==[]);//false
+		// console.log(NaN == NaN);//false
+
+		// window.foo || window.foo = 'bar';
+		// console.log(window.foo);
+
+		key = 1;//不会报错
+		console.log(key);
+		var key1 = 2;
+		console.log(key1);
+		//有var声明是局部变量，没有var声明是全局变量
+
+		console.log(["1","2","3"].map(parseInt));
+		/*实现一个man的类*/
+		function Man(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		Man.prototype.say = function(){
+			console.log(this.name);
+		}
+
+		var man = new Man('li',21);
+		man.say();
+		/*实现一个man的类*/
+
+		Array.prototype.unique = function(){
+			var res = [];
+			for(var i = 0;i < this.length;i++){
+				var repeat = false;
+				for(var j = 0;j < res.length;j++){
+					if(this[i]==res[j]){
+						repeat = true;
+						break;
+					}
+				}
+				if(!repeat){
+					res.push(this[i]);
+				}
+			}
+			return res;
+		}
+
+		var arr = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0];
+		console.log(arr.unique());
 	</script>
 </body>
 </html>
