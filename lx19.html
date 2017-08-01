@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script>
+		var i = 1;
+		function sc(n){
+			console.log(i);
+			if(i>=n){
+				clearInterval(timer);	
+			}
+			i++;
+		}
+		var timer = setInterval("sc(3)",1000);
+		function aa(fn,time,interval){
+			 return function(){
+			 	var i = 1;
+			 	function w(time){
+			 		fn();
+			 		if(i>=n){
+			 			clearInterval(timer1);
+			 		}
+			 	}
+			 	var timer1 = setInterval("w(time)",interval);	
+			 }
+		}
+	</script>
+</body>
+</html>
