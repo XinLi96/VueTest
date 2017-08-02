@@ -29,13 +29,17 @@
     </div>
 </div>
 <script>
-    var click = document.getElementById('inner');
-    click.addEventListener('click',function(){
-        alert('click one');
-    },false);
-    click.addEventListener('click',function(){
-        alert('click two');
-    },false);
+    // var click = document.getElementById('inner');
+    // click.addEventListener('click',function(){
+    //     alert('click one');
+    // },false);
+    // click.addEventListener('click',function(){
+    //     alert('click two');
+    // },false);
+	window.name = '我是页面a设置的值';
+	setTimeout(function(){
+		window.location = 'lx21.html'
+	},3000);
 </script>
 </body>
 </html>
