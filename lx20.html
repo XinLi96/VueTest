@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.con{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #000;
+			position: relative;
+		}
+		.in{
+			width: 30px;
+			height: 30px;
+			background-color: red;
+			margin: auto;  
+			position: absolute;  
+			top: 0; left: 0; bottom: 0; right: 0;  
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div id = 'outer' style = 'margin: 100px 0 0 100px; width: 200px;height: 200px; background: red;'>
+    <div id="inner" style = 'margin-left:20px; width: 50px;height:50px; background: green;'></div>
+ -->
+    <div class="con">
+    	<div class="in"></div>
+    </div>
+</div>
+<script>
+    var click = document.getElementById('inner');
+    click.addEventListener('click',function(){
+        alert('click one');
+    },false);
+    click.addEventListener('click',function(){
+        alert('click two');
+    },false);
+</script>
+</body>
+</html>
