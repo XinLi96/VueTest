@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    ul,ol{
+      list-style: none;
+    }
+    .select{
+      cursor: pointer;
+      border: 1px solid #000;
+      display: inline-block;
+      width: 150px;
+    }
+    .sub{
+      background-color: #ccc;
+      width: 150px;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+    .sub li{
+      border-bottom: 1px dashed #000;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .sub li:hover{
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="dropDown">
+    <span class="select">请选择游戏名称</span>
+    <ul class="sub">
+      <li>地下城与勇士</li>
+      <li>魔兽世界（国服）</li>
+      <li>魔兽世界（台服）</li>
+      <li>热血江湖</li>
+      <li>大话西游II</li>
+      <li>QQ幻想世界</li>
+    </ul>
+  </div>
+
+  <script>
+    var oSelec = document.getElementsByTagName('span')[0];
+    var oSub = document.getElementsByTagName('ul')[0];
+    var aLi = document.getElementsByTagName('li');
+
+    oSelec.onclick = function(event){
+      var style = oSub.style;
+      style.display = style.display=="block"? "none" : "block";
+      (event || window.event).cancelBubble = true;
+    };
+    for(var i = 0;i < aLi.length;i++){
+      aLi[i].onclick = function(){
+        oSelec.innerHTML = this.innerHTML;
+      }
+      document.onclick = function(){
+        oSub.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
