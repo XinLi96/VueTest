@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.test{
+			width: 100px;
+			height: 100px;
+			border: 2px solid #000;
+		}
+		.test:hover{
+			border: 1px solid red;
+		}
+		.in{
+			width: 50px;
+			height: 50px;
+			border: 5px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<ul id="uu">
+		<li class="ll">1</li>
+		<li class="ll">2</li>
+		<li class="ll">3</li>
+	</ul>
+	<div class="test">
+		<div class="in"></div>
+	</div>
+	
+	<script>
+		var oUu = document.getElementById('uu');
+		var e = e || window.event;
+		oUu.addEventListener("click",function(e){		
+			console.log(e.target.innerHTML);
+		},false);
+		console.log(typeof('123'));
+	</script>
+</body>
+</html>
