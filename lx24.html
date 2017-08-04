@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.con{
+			width: 100%;
+			display: flex;
+		}
+		.d1,.d2,.d3{
+			height: 100px;
+			display: inline-block;
+			flex:1;
+		}
+		.d1{
+			background-color: red;
+		}
+		.d2{
+			background-color: blue;
+		}
+		.d3{
+			background-color: yellow;
+		}
+		@media screen and (max-width: 900px){
+			.con{
+				display: block;
+			}
+			.d1,.d2,.d3{
+				height: 100px;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="d1">1</div>
+		<div class="d2">2</div>
+		<div class="d3">3</div>
+	</div>
+</body>
+</html>
