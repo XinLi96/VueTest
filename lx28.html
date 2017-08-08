@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var arr =  [1,13,24,11,11,14,1,2];
+
+		function unique(arr){
+			var result = {};
+			var data = [];
+			for(var i = 0;i < arr.length;i++){
+				if(!result[arr[i]]){
+					result[arr[i]] = true;
+					data.push(arr[i]);
+				}
+			}
+			return data;
+		}
+
+		console.log(unique(arr));
+	</script>
+</body>
+</html>
