@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var str = "nininaasdihaoa";
+		function test(str){
+			var o = {};
+			for(var i = 0,length = str.length;i < length;i++){
+				var char = str.charAt(i);
+				if(o[char]){
+					o[char]++;
+				}else{
+					o[char] = 1;
+				}
+			}
+			var max = 0;
+			for(var key in o){
+				if(max <o[key]){
+					max = o[key];
+				}
+			}
+			for(var key in o){
+				if(o[key] == max){
+					console.log("最多的字符是"+key);
+					console.log("出现的次数是"+max);
+				}
+			}
+		}
+		test(str);
+	</script>
+</body>
+</html>
