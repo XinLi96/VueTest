@@ -31,7 +31,19 @@
 				}
 			}
 		}
-		test(str);
+		var num=0,value=null;
+		function test1(str){
+			var newStr = str.split('').sort().join('');
+			var re  = /(\w)\1+/g;
+			newStr.replace(re,function($0,$1){
+				if(num < $0.length){
+					num = $0.length;
+					value = $1;
+				}
+			});
+			return '字符是'+value+'次数是'+num;
+		}
+		alert(test1(str));
 	</script>
 </body>
 </html>
