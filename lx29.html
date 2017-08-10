@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		var arr = [10,11,7,3,5,8,9,3];
+		function cha(arr){
+			var minPrice = arr[0];
+			var maxProfit = 0;
+			for(var i = 0;i < arr.length;i++){
+				minPrice = Math.min(minPrice,arr[i]);
+			}
+			for(var i = 0;i < arr.length;i++){
+				var currentPrice = arr[i];
+				var temp = currentPrice - minPrice;
+				maxProfit = Math.max(temp,maxProfit);
+			}
+			return maxProfit;
+		}
+		alert(cha(arr));
+	</script>
+</body>
+</html>
