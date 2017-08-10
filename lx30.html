@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<input type="text" dir="rtl">
+	<script>
+		// var arr = ["one","two","three"];
+		// var arr1 = arr.slice(0);
+		// var arr1 = arr.concat();
+		// arr1[1] = 'lx';
+		// console.log('旧数组'+arr);
+		// console.log('新数组'+arr1);
+
+		var str = '61464387.2';
+		function convert(str){
+			var newStr = "";
+			var count = 0;
+			 
+			if(str.indexOf(".")==-1){
+			   for(var i=str.length-1;i>=0;i--){
+				 if(count % 3 == 0 && count != 0){
+				   newStr = str.charAt(i) + "," + newStr;
+				 }else{
+				   newStr = str.charAt(i) + newStr;
+				 }
+				 count++;
+			   }
+			   str = newStr + ".00"; //自动补小数点后两位
+			   console.log(str)
+			}
+			else
+			{
+			   for(var i = str.indexOf(".")-1;i>=0;i--){
+				 if(count % 3 == 0 && count != 0){
+				   newStr = str.charAt(i) + "," + newStr;
+				 }else{
+				   newStr = str.charAt(i) + newStr; //逐个字符相接起来
+				 }
+				 count++;
+		   	}
+			   str = newStr + (str + "00").substr((str + "00").indexOf("."),3);
+			   console.log(str)
+			 }
+		}
+		convert(str);
+	</script>
+</body>
+</html>
