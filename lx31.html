@@ -3,9 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		.div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;/*普通浏览器的样式*/
+			background-color: black\9;/*ie8及以下的样式*/
+			*background-color: yellow;/*ie7及以下的样式*/
+			_background-color: blue;/*ie6浏览器的样式*/
+		}
+	</style>
 </head>
 <body>
-	 
+	<div class="div1"></div> 
+	
 	 <script>
 	 	var arr = [1,2,3];
 	 	var obj = {'a':1};
