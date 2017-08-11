@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function sumAll(){
+			var arr = arguments;
+			var sum = 0;
+			for(var i = 0;i < arr.length;i++){
+				sum = sum + arr[i];
+			}
+			return sum;
+		}
+		console.log(sumAll(1,2,3,5,5));
+	</script>
+</body>
+</html>
