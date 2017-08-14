@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		//网易前端笔试编程题一 
+		function xyf(str) {
+		    let hash = {}
+		    let arr = str.split("")
+		    arr.forEach((e) => {
+		        if (hash[e]) hash[e]++
+		        else hash[e] = 1
+		    })
+		    let count = 0
+		    for (key in hash) {
+		        count++
+		    }
+		    return (count === 2 || count === 1) ? count : 0
+		}
+		console.log(xyf('ABAAA'));
+		//网易前端笔试编程题二
+
+		//网易前端笔试编程题三
+	</script>  
+</body>
+</html>
