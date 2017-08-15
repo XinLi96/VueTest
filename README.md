@@ -99,3 +99,24 @@ Vue的过渡效果：
 6.v-leave-to: 2.1.8版及以上 定义离开过渡的结束状态。在离开过渡被触发一帧后生效（于此同时 v-leave 被删除），在 transition/animation 完成之后移除。
 
 对于这些在 enter/leave 过渡中切换的类名，v- 是这些类名的前缀。使用 <transition name="my-transition"> 可以重置前缀，比如 v-enter 替换为 my-transition-enter。
+
+```
+function Foo() {
+    getName = function () { alert (1); };
+    return this;
+}
+Foo.getName = function () { alert (2);};
+Foo.prototype.getName = function () { alert (3);};
+var getName = function () { alert (4);};
+function getName() { alert (5);}
+
+//请写出以下输出结果：
+Foo.getName();//2
+getName();//4
+Foo().getName();//1
+getName();//1
+new Foo.getName();//2
+new Foo().getName();//3
+new new Foo().getName();//3
+```
+第一问:
