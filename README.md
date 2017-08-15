@@ -153,7 +153,7 @@ var x;
 function x(){}
 console.log(x);
 x=1;
-```<br>
+```
 ##第三问：
 Foo().getName();先执行Foo函数，然后调用Foo函数的返回值对象的getName属性函数。
 Foo函数的先执行getName = function(){alert(1)}，在这里并没有var声明，先在foo函数作用域内寻找getName变量，再向当前作用域的外层寻找，直至找到为止。
