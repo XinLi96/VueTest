@@ -125,11 +125,11 @@ new new Foo().getName();//3
 
 
 ##第一问:
-Foo.getName是要访问Foo函数上的静态属性
+Foo.getName是要访问Foo函数上的静态属性<br>
 ##第二问：
-直接调用getName函数，是要访问当前作用域内的叫getName的函数。此处需要注意，一是变量声明提升。，二是函数表达式。
+直接调用getName函数，是要访问当前作用域内的叫getName的函数。此处需要注意，一是变量声明提升。，二是函数表达式。<br>
 ###变量声明提升
-所有声明变量或声明函数都会被提升到当前函数的顶部。
+所有声明变量或声明函数都会被提升到当前函数的顶部。<br>
 ```
 console.log('x' in window);//true
 var x;
@@ -153,26 +153,26 @@ var x;
 function x(){}
 console.log(x);
 x=1;
-```
+```<br>
 ##第三问：
 Foo().getName();先执行Foo函数，然后调用Foo函数的返回值对象的getName属性函数。
 Foo函数的先执行getName = function(){alert(1)}，在这里并没有var声明，先在foo函数作用域内寻找getName变量，再向当前作用域的外层寻找，直至找到为止。
-所以此时是将外层的getName函数修改了。
+所以此时是将外层的getName函数修改了。<br>
 ##第四问：
-直接调用getName函数，相当于window.getName
+直接调用getName函数，相当于window.getName<br>
 ##第五问
 new Foo.getName 此处考察的是js运算符优先级问题。
 
 ![baidu](http://images2015.cnblogs.com/blog/746158/201602/746158-20160214172948591-1509302580.png)
 
-所以相当于是 new (Foo.getName)()
+所以相当于是 new (Foo.getName)()<br>
 ##第六问：
 new Foo().getName()优先级之后变为(new Foo()).getName()
 ###构造函数的返回值
 1、没有返回值则按照其他语言一样返回实例化对象。
 2、若有返回值则检查其返回值是否为引用类型。如果是非引用类型，如基本类型（string,number,boolean,null,undefined）则与无返回值相同，实际返回其实例化对象。
 3、若返回值是引用类型，则实际返回值为这个引用类型。
-在此题中相当于返回this，this.getName()会沿着原型链去寻找getName函数。
+在此题中相当于返回this，this.getName()会沿着原型链去寻找getName函数。<br>
 ##第七问：
 new new Foo().getName();执行为new ((new Foo()).getName)();
 先初始化Foo的实例化对象，然后将其原型上的getName函数作为构造函数再次new。
