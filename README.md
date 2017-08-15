@@ -119,4 +119,7 @@ new Foo.getName();//2
 new Foo().getName();//3
 new new Foo().getName();//3
 ```
+首先定义了一个叫Foo的函数，之后为Foo创建了一个叫getName的静态属性存储了一个匿名函数，之后为Foo的原型对象新创建了一个叫getName的匿名函数。之后又通过函数变量表达式创建了一个getName的函数，最后再声明一个叫getName函数。
+
+
 第一问:
