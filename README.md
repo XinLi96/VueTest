@@ -100,6 +100,7 @@ Vue的过渡效果：
 
 对于这些在 enter/leave 过渡中切换的类名，v- 是这些类名的前缀。使用 <transition name="my-transition"> 可以重置前缀，比如 v-enter 替换为 my-transition-enter。
 
+[web整理](https://github.com/XinLi96/VueTest/blob/master/前端整理/web复习.md)
 面试最容易忽视的难题
 =====
 ```
