@@ -2,200 +2,7 @@
 =====
 一面
 ------
-页面布局
-____
-一、浮动布局
-````
-<section class="layout float">
-      <style media="screen">
-      .layout.float .left{
-        float:left;
-        width:300px;
-        background: red;
-      }
-      .layout.float .center{
-        background: yellow;
-      }
-      .layout.float .right{
-        float:right;
-        width:300px;
-        background: blue;
-      }
-      </style>
-      <h1>三栏布局</h1>
-      <article class="left-right-center">
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="center">
-          <h2>浮动解决方案</h2>
-          1.这是三栏布局的浮动解决方案；
-          2.这是三栏布局的浮动解决方案；
-          3.这是三栏布局的浮动解决方案；
-          4.这是三栏布局的浮动解决方案；
-          5.这是三栏布局的浮动解决方案；
-          6.这是三栏布局的浮动解决方案；
-        </div>
-      </article>
-````
-二、绝对布局
-````
-<section class="layout absolute">
-      <style>
-        .layout.absolute .left-center-right>div{
-          position: absolute;
-        }
-        .layout.absolute .left{
-          left:0;
-          width: 300px;
-          background: red;
-        }
-        .layout.absolute .center{
-          left: 300px;
-          right: 300px;
-          background: yellow;
-        }
-        .layout.absolute .right{
-          right:0;
-          width: 300px;
-          background: blue;
-        }
-      </style>
-      <h1>三栏布局</h1>
-      <article class="left-center-right">
-        <div class="left"></div>
-        <div class="center">
-          <h2>绝对定位解决方案</h2>
-          1.这是三栏布局的浮动解决方案；
-          2.这是三栏布局的浮动解决方案；
-          3.这是三栏布局的浮动解决方案；
-          4.这是三栏布局的浮动解决方案；
-          5.这是三栏布局的浮动解决方案；
-          6.这是三栏布局的浮动解决方案；
-        </div>
-        <div class="right"></div>
-      </article>
-    </section>
-````
-三、flex布局
-````
-<section class="layout flexbox">
-      <style>
-        .layout.flexbox{
-          margin-top: 110px;
-        }
-        .layout.flexbox .left-center-right{
-          display: flex;
-        }
-        .layout.flexbox .left{
-          width: 300px;
-          background: red;
-        }
-        .layout.flexbox .center{
-          flex:1;
-          background: yellow;
-        }
-        .layout.flexbox .right{
-          width: 300px;
-          background: blue;
-        }
-      </style>
-      <h1>三栏布局</h1>
-      <article class="left-center-right">
-        <div class="left"></div>
-        <div class="center">
-          <h2>flexbox解决方案</h2>
-          1.这是三栏布局的浮动解决方案；
-          2.这是三栏布局的浮动解决方案；
-          3.这是三栏布局的浮动解决方案；
-          4.这是三栏布局的浮动解决方案；
-          5.这是三栏布局的浮动解决方案；
-          6.这是三栏布局的浮动解决方案；
-        </div>
-        <div class="right"></div>
-      </article>
-    </section>
-````
-四、表格布局
-````
-<section class="layout table">
-      <style>
-        .layout.table .left-center-right{
-          width:100%;
-          height: 100px;
-          display: table;
-        }
-        .layout.table .left-center-right>div{
-          display: table-cell;
-        }
-        .layout.table .left{
-          width: 300px;
-          background: red;
-        }
-        .layout.table .center{
-          background: yellow;
-        }
-        .layout.table .right{
-          width: 300px;
-          background: blue;
-        }
-      </style>
-      <h1>三栏布局</h1>
-      <article class="left-center-right">
-        <div class="left"></div>
-        <div class="center">
-          <h2>表格布局解决方案</h2>
-          1.这是三栏布局的浮动解决方案；
-          2.这是三栏布局的浮动解决方案；
-          3.这是三栏布局的浮动解决方案；
-          4.这是三栏布局的浮动解决方案；
-          5.这是三栏布局的浮动解决方案；
-          6.这是三栏布局的浮动解决方案；
-        </div>
-        <div class="right"></div>
-      </article>
-    </section>
-````
-五、网格布局
-````
-<section class="layout grid">
-      <style>
-        .layout.grid .left-center-right{
-          width:100%;
-          display: grid;
-          grid-template-rows: 100px;
-          grid-template-columns: 300px auto 300px;
-        }
-        .layout.grid .left-center-right>div{
 
-        }
-        .layout.grid .left{
-          width: 300px;
-          background: red;
-        }
-        .layout.grid .center{
-          background: yellow;
-        }
-        .layout.grid .right{
-
-          background: blue;
-        }
-      </style>
-      <h1>三栏布局</h1>
-      <article class="left-center-right">
-        <div class="left"></div>
-        <div class="center">
-          <h2>网格布局解决方案</h2>
-          1.这是三栏布局的浮动解决方案；
-          2.这是三栏布局的浮动解决方案；
-          3.这是三栏布局的浮动解决方案；
-          4.这是三栏布局的浮动解决方案；
-          5.这是三栏布局的浮动解决方案；
-          6.这是三栏布局的浮动解决方案；
-        </div>
-        <div class="right"></div>
-      </article>
-    </section>
-````
 CSS盒模型
 _____
 基本概念:标准模型+IE模型
@@ -209,11 +16,37 @@ CSS如何设置这两种模型<br>
 * box-sizing：border-box；用于IE浏览器
 
 Js如何设置获取盒模型对应的宽和高<br>
-* 整理到这里！！！！
+* dom.style.width/height<br>
+  取到内联样式的宽和高
+* dom.currentStyle.width/height<br>
+  取到渲染之后的宽和高(只有IE支持)
+* window.getComputedStyle(dom).width/height<br>
+  取到渲染之后的宽和高(兼容到Firefox和Chrome)
+* dom.getBoundingClientRect().width/height<br>
+  取到渲染之后的宽和高(可以计算相对于窗口原点的left和top的值)
     
 根据盒模型解释边距重叠<br>
-BFC或IFC（边距重叠解决方案）<br>
+* 父子元素的边距重叠（子元素的高度和margin-top）
+* 兄弟元素的边距重叠（兄弟的上下边距显示最大边距）
+* 空元素的边距重叠（空元素的上边距和下边距显示最大边距）
 
+BFC或IFC（边距重叠解决方案）<br>
+>BFC：块级格式化上下文<br>
+>IFC：行内格式化上下文
+* BFC的原理：BFC的渲染规则
+* 一、BFC的垂直方向边距会发生重叠
+* 二、BFC的box区域不会与浮动元素重叠（用于清除浮动）
+* 三、BFC在页面上是一个独立的容器，外面的元素不会影响里面的元素
+* 四、计算BFC高度的时候浮动元素也会参与计算
+>如何创建BFC
+* float不为none（默认值是none）
+* position不是static和relative
+* display的值是table相关的
+* overflow的值不为visible
+>BFC的使用场景
+* BFC垂直方向边距重叠
+* BFC不与float元素重叠
+* BFC子元素即使是float也会参与
 DOM事件类
 ______
 基本概念：DOM事件的级别<br>
