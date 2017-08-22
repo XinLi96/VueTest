@@ -27,7 +27,7 @@ Event对象的常见应用<br>
 注册了两个事件的时候可以在执行完第一个事件之后阻止第二个事件执行
 * event.currentTarget<br>
 当前所绑定的事件的元素
-* event.trget<br>
+* event.target<br>
 当前被点击的元素
 
 自定义事件
