@@ -14,6 +14,7 @@ web前端整理
 * [页面性能](https://github.com/XinLi96/VueTest/blob/master/前端整理/页面性能.md)
 * [错误监控](https://github.com/XinLi96/VueTest/blob/master/前端整理/错误监控.md)
 * [多知识点的简单题](https://github.com/XinLi96/VueTest/blob/master/前端整理/多知识点的简单题.md)
+* [this详解](https://github.com/XinLi96/VueTest/blob/master/前端整理/this分析.md)
 
 
 既然有缘看到这里，不妨互粉一下。
