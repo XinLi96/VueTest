@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    width: 1920px;
+    /*background-color: #edeff4;*/
+    /*height: 850px;*/
+}
+.top{
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+}
+.top-wrapper{
+    width: 1500px;
+    height: 100%;
+    /*background-color: #fbfbfb;*/
+    margin: 0 auto;
+}
+.logo{
+    padding-top: 15px;
+}
+.download{
+    float: right;
+    padding-top: 25px;
+    cursor: pointer;
+}
+.download span{
+    color: #2385c0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "微软雅黑";
+}
+.download img{
+    margin-bottom: -5px;
+}
+/*  二维码开始  */
+.enter-leave{
+    z-index: 4;
+    display: none;
+    position: absolute;
+}
+.hidden{
+    display: block;
+}
+/*  二维码结束  */
+.center{
+    width: 100%;
+    height: 646px;
+    background: url("../img/login-bg.png");
+}
+.user-login{
+    width: 367px;
+    height: 409px;
+    background-color: #f5f7f8;
+    border-radius: 15px;
+    float: right;
+    margin-right: 210px;
+    margin-top: 120px;
+}
+.login-head{
+    font-size: 20px;
+    font-family: "微软雅黑";
+    color: rgb(61, 177, 234);
+    font-weight: bold;
+    padding-top: 70px;
+    padding-left: 143px;
+}
+.name-pass{
+    padding-left: 43px;
+    padding-top: 44px;
+}
+.user-name{
+    width: 280px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+}
+.user-name input{
+    height: 20px;
+    width: 200px;
+    border: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    outline:none;
+}
+.user-name img{
+    margin-left: 18px;
+    margin-bottom: -3px;
+}
+.user-pass{
+    width: 280px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    margin-top: 22px;
+}
+.user-pass input{
+    height: 20px;
+    width: 200px;
+    border: 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    outline:none;
+}
+.user-pass img{
+    margin-left: 18px;
+    margin-bottom: -6px;
+}
+.btn-submit{
+    margin-top: 30px;
+}
+.btn-submit input{
+    width: 280px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    outline:none;
+    background-color: rgb(61, 177, 234);
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: rgb(254, 255, 255);
+    font-weight: bold;
+}
+.forget-pass{
+    margin-left: 198px;
+    margin-top: 19px;
+    padding-bottom: 70px;
+}
+.forget-pass span a{
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: rgb(181, 181, 181);
+    text-decoration: none;
+}
+.forget-pass img{
+    margin-bottom: -3px;
+}
