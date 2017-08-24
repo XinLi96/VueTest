@@ -71,6 +71,14 @@
     padding-left: 43px;
     padding-top: 44px;
 }
+/*  提示语开始  */
+.markedWords{
+    padding-left: 13px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(246, 69, 69);
+}
+/*  提示语结束  */
 .user-name{
     width: 280px;
     height: 40px;

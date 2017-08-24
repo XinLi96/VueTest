@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登录页</title>
     <link rel="stylesheet" href="../assets/css/loginPage.css">
 </head>
 <body>
@@ -26,15 +26,18 @@
                 </div>
                 <div class="name-pass">
                     <form action="" method="">
+                        <div class="markedWords" id="marked">
+
+                        </div>
                         <div class="user-name">
                             <img src="../assets/img/666_03.png" alt="">
-                            <input type="text" placeholder="请输入用户名">
+                            <input type="text" id="userName" placeholder="请输入用户名">
                         </div>
                         <div class="user-pass">
                             <img src="../assets/img/666_07.png" alt="">
-                            <input type="text" placeholder="请输入密码">
+                            <input type="password" id="userPass" placeholder="请输入密码">
                         </div>
-                        <div class="btn-submit">
+                        <div class="btn-submit" id="btnSubmit">
                             <input type="submit" value="登录">
                         </div>
                     </form>
