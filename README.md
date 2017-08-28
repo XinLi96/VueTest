@@ -17,6 +17,6 @@ web前端整理
 * [this详解](https://github.com/XinLi96/VueTest/blob/master/前端整理/this分析.md)
 * [CSS3新特性](https://github.com/XinLi96/VueTest/blob/master/前端整理/CSS3新特性.md)
 * [蘑菇街面经](https://github.com/XinLi96/VueTest/blob/master/前端整理/蘑菇街面经.md)
-
+* [Vue2.0的变化](https://github.com/XinLi96/VueTest/blob/master/前端整理/vue2.0的变化.md)
 
 既然有缘看到这里，不妨互粉一下。
