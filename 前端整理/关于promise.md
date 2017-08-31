@@ -110,6 +110,14 @@ getJSON("/posts.json").then(function(json) {
 
 Promise.prototype.catch方法是.then(null, rejection)的别名，用于指定发生错误时的回调函数。
 
+Promise.all方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+````
+var p = Promise.all([p1, p2, p3]);
+````
+p的状态由p1、p2、p3决定，分成两种情况。
+（1）只有p1、p2、p3的状态都变成fulfilled，p的状态才会变成fulfilled，此时p1、p2、p3的返回值组成一个数组，传递给p的回调函数。
+
+（2）只要p1、p2、p3之中有一个被rejected，p的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。
 
 Promise应用的面试题:
 > 题目：红灯三秒亮一次，绿灯一秒亮一次，黄灯2秒亮一次；如何让三个灯不断交替重复亮灯？（用Promse实现）三个亮灯函数已经存在：
@@ -123,7 +131,7 @@ function green(){
 function yellow(){
     console.log('yellow');
 }
- 
+
 var tic = function(timmer, cb){
     return new Promise(function(resolve, reject) {
         setTimeout(function() {
@@ -132,7 +140,7 @@ var tic = function(timmer, cb){
         }, timmer);
     });
 };
- 
+
 var d = new Promise(function(resolve, reject){resolve();});
 var step = function(def) {
     def.then(function(){
@@ -145,7 +153,7 @@ var step = function(def) {
         step(def);
     });
 }
- 
+
 step(d);
 ````
 可以看到虽然Promise可以用来解决回调地狱问题，但是仍然不可避免的会有回调出现，更好的解决方案是利用Generator来减少回调:
@@ -158,14 +166,14 @@ var tic = function(timmer, str){
         }, timmer);
     });
 };
- 
- 
+
+
 function *gen(){
     yield tic(3000, 'red');
     yield tic(1000, 'green');
     yield tic(2000, 'yellow');
 }
- 
+
 var iterator = gen();
 var step = function(gen, iterator){
     var s = iterator.next();
@@ -177,9 +185,10 @@ var step = function(gen, iterator){
         });
     }
 }
- 
+
 step(gen, iterator);
 ````
+
 
 
 
