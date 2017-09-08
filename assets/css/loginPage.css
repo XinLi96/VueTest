@@ -154,3 +154,25 @@
 .forget-pass img{
     margin-bottom: -3px;
 }
+/*  footer开始  */
+.footer{
+    height: 134px;
+    background-color: #f5f5f6;
+}
+.footer-font{
+    float: left;
+    padding-top: 49px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(133, 141, 151);
+    line-height: 2;
+}
+.font-bottom a{
+    text-decoration: none;
+    color: #7db6e1;
+}
+.footer-img{
+    padding-top: 15px;
+    float: right;
+}
+/*  footer结束  */
