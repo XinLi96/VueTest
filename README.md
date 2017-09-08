@@ -21,4 +21,6 @@ web前端整理
 * [关于promise](https://github.com/XinLi96/VueTest/blob/master/前端整理/关于promise.md)
 * [let和const](https://github.com/XinLi96/VueTest/blob/master/前端整理/let和const.md)
 
+每一个努力的人都会有属于自己的一片天。
+
 既然有缘看到这里，不妨互粉一下。
