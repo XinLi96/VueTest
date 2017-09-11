@@ -20,6 +20,8 @@ web前端整理
 * [Vue2.0的变化](https://github.com/XinLi96/VueTest/blob/master/前端整理/vue2.0的变化.md)
 * [关于promise](https://github.com/XinLi96/VueTest/blob/master/前端整理/关于promise.md)
 * [let和const](https://github.com/XinLi96/VueTest/blob/master/前端整理/let和const.md)
+* [设计模式](https://github.com/XinLi96/VueTest/blob/master/前端整理/设计模式.md)
+* [便利蜂面经](https://github.com/XinLi96/VueTest/blob/master/前端整理/便利蜂面经.md)
 
 每一个努力的人都会有属于自己的一片天。
 
