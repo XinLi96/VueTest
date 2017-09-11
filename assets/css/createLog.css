@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul{
+    list-style: none;
+}
+.content{
+    height: 1000px;
+}
+.wrapper{
+    width: 1099px;
+    border: 1px solid #000000;
+    height: 100%;
+    margin-left: 182px;
+    margin-top: 50px;
+}
+.header{
+    padding-top: 29px;
+    padding-left: 20px;
+    padding-bottom: 18px;
+}
+.header-back{
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: rgb(77, 145, 228);
+}
+.header-title{
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    padding-left: 10px;
+}
+.line{
+    width: 1023px;
+    height: 1px;
+    border-bottom: 1px solid #dfe6ec;
+    margin-left: 20px;
+}
+.listLog{
+    padding-top: 30px;
+}
+.redStar{
+    color: red;
+}
+.clientName{
+    padding-left: 109px;
+    clear: both;
+}
+.clientTitle{
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #666666;
+    line-height: 1.2;
+    padding-right: 10px;
+}
+.clientName input{
+    width: 360px;
+    height: 31px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.nextOne{
+    padding-top: 24px;
+}
+.clientName .timeInput{
+    width: 150px;
+}
+.cityGroup{
+    width: 150px;
+    height: 31px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.linkMan{
+    padding-left: 95px;
+}
+.linkMan .redStar{
+    float: left;
+}
+.selectTitle{
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #666666;
+    line-height: 1.2;
+    padding-right: 10px;
+    float: left;
+}
+.manCard{
+    display: inline-block;
+    width: 224px;
+    height: 133px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+}
+.manNext{
+    margin-left: 10px;
+}
+.manInfo{
+    padding-top: 25px;
+    padding-left: 25px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+    color: rgb(102, 102, 102);
+}
+.manInfo img{
+    margin-left: 7px;
+}
+.manStatus{
+    height: 16px;
+    background-color: #c1cfe1;
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+.manPhone{
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(102, 102, 102);
+}
+.manPhone input{
+
+}
+.cardActive{
+    border: 1px solid #4d91e4;
+}
+.clientName .dx{
+    width: 30px;
+    height: 15px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.clientName .reason{
+    width: 360px;
+    height: 31px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.dxContent{
+    width: 360px;
+    height: 55px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.isVisit{
+    padding-left: 73px;
+}
+.isVisit select{
+    width: 260px;
+    height: 28px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.dx{
+    width: 30px;
+    height: 15px;
+    border: 1px solid #bfcbd9;
+    border-radius: 5px;
+}
+.btnSub{
+    padding-left: 187px;
+    padding-top: 31px;
+}
+.btnSub input{
+    width: 88px;
+    height: 36px;
+    background-color: #4d91e4;
+    color: #ffffff;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+

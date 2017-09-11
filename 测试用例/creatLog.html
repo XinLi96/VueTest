@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/css/createLog.css">
+    <script src="../assets/js/jsAddresss.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="wrapper">
+            <div class="header">
+                <a href="#" class="header-back">返回</a>
+                <span class="header-title">填写拜访记录</span>
+            </div>
+            <div class="line"></div>
+            <div class="listLog">
+                <form action="">
+                    <div class="clientName">
+                        <span class="redStar">*</span><span class="clientTitle">客户名称：</span>
+                        <input type="text">
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">拜访时间：</span>
+                        <input type="date" class="timeInput">
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">拜访地区：</span>
+                        <select id="cmbProvince" name="cmbProvince" class="cityGroup"></select>
+                        <select id="cmbCity" class="cityGroup" name="cmbCity"></select>
+                        <select id="cmbArea" class="cityGroup" name="cmbArea"></select>
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">详细地址：</span>
+                        <input type="text">
+                    </div>
+                    <div class="linkMan nextOne">
+                        <span class="redStar">*</span><span class="selectTitle">选择联系人：</span>
+                        <div class="manCard cardActive">
+                            <div class="manInfo">
+                                李先生
+                                <img src="../assets/img/911_03.png" alt="">
+                                <span class="manStatus">责任人</span>
+                            </div>
+                            <div class="manPhone">
+                                <div>手机：<input type="checkbox">13512345678</div>
+                            </div>
+                        </div>
+                        <div class="manCard manNext">
+                            <div class="manInfo">
+                                张女士
+                                <img src="../assets/img/911_05.png" alt="">
+                                <span class="manStatus">法人</span>
+                            </div>
+                            <div class="manPhone">
+                                <div>手机：<input type="checkbox">13512345678</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="clientTitle">&nbsp;短信通知：</span>
+                        <input type="radio" class="dx" name="dx">是
+                        <input type="radio" class="dx" name="dx">否
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">短信模板：</span>
+                        <select name="" id="" class="reason" >
+                            <option value="">请选择拜访原因</option>
+                        </select>
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">短信内容：</span>
+                        <textarea name="" id="" class="dxContent"></textarea>
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">出行方式：</span>
+                        <input type="radio" class="dx" name="dx">公交/地铁
+                        <input type="radio" class="dx" name="dx">火车/高铁
+                        <input type="radio" class="dx" name="dx">自驾
+                    </div>
+                    <div class="isVisit nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">是否有陪同拜访：</span>
+                        <input type="radio" class="dx" name="dx">是
+                        <input type="radio" class="dx" name="dx">否
+                        <select name="" id="">
+                            <option value="">请选择管家名称</option>
+                        </select>
+                    </div>
+                    <div class="clientName nextOne">
+                        <span class="redStar">*</span><span class="clientTitle">拜访原因：</span>
+                        <select name="" id="" class="reason">
+                            <option value="">请选择拜访原因</option>
+                        </select>
+                    </div>
+                    <div class="isVisit nextOne">
+                        <span class="clientTitle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拜访详细说明：</span>
+                        <textarea name=""  class="dxContent"></textarea>
+                    </div>
+                    <div class="btnSub">
+                        <input type="submit" value="确定">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+    var oManCard = $('.manCard');
+    console.log(oManCard);
+    var e = e || window.event;
+    oManCard.click(function(e){
+        $(e.target).parent().siblings().removeClass('cardActive');
+        $(e.target).parent().addClass('cardActive');
+    })
+</script>
+</body>
+</html>
