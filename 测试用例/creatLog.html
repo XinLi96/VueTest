@@ -35,27 +35,29 @@
                         <input type="text">
                     </div>
                     <div class="linkMan nextOne">
-                        <span class="redStar">*</span><span class="selectTitle">选择联系人：</span>
-                        <div class="manCard cardActive">
-                            <div class="manInfo">
-                                李先生
-                                <img src="../assets/img/911_03.png" alt="">
-                                <span class="manStatus">责任人</span>
+                        <span class="redStar">*</span><span class="selectTitle">选择联系人：</span>                <div class="cardBox">
+                            <div class="manCard cardActive">
+                                <div class="manInfo">
+                                    李先生
+                                    <img src="../assets/img/911_03.png" alt="">
+                                    <span class="manStatus">责任人</span>
+                                </div>
+                                <div class="manPhone">
+                                    <div>手机：<input type="checkbox">13512345678</div>
+                                </div>
                             </div>
-                            <div class="manPhone">
-                                <div>手机：<input type="checkbox">13512345678</div>
+                            <div class="manCard manNext">
+                                <div class="manInfo">
+                                    张女士
+                                    <img src="../assets/img/911_05.png" alt="">
+                                    <span class="manStatus">法人</span>
+                                </div>
+                                <div class="manPhone">
+                                    <div>手机：<input type="checkbox">13512345678</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="manCard manNext">
-                            <div class="manInfo">
-                                张女士
-                                <img src="../assets/img/911_05.png" alt="">
-                                <span class="manStatus">法人</span>
-                            </div>
-                            <div class="manPhone">
-                                <div>手机：<input type="checkbox">13512345678</div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="clientName nextOne">
                         <span class="clientTitle">&nbsp;短信通知：</span>
@@ -106,14 +108,15 @@
 
     <script src="../assets/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
+    /* 地区三级联动初始函数 */
     addressInit('cmbProvince', 'cmbCity', 'cmbArea');
-    var oManCard = $('.manCard');
-    console.log(oManCard);
-    var e = e || window.event;
-    oManCard.click(function(e){
-        $(e.target).parent().siblings().removeClass('cardActive');
-        $(e.target).parent().addClass('cardActive');
+
+    /* 名片选择效果部分 */
+    $('.manCard').click(function () {
+        $(this).addClass('cardActive').siblings().removeClass('cardActive')
+
     })
+
 </script>
 </body>
 </html>
