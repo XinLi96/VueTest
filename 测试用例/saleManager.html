@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>总部设置</title>
+    <link href="../assets/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css">
+    <link href="../assets/lib/ligerUI/skins/Aqua/css/ligerui-common.css" rel="stylesheet" type="text/css">
+    <script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerTree.js" type="text/javascript"></script>
+    <style>
+        .l-grid-hd-cell-inner{
+            background-color: #eef1f6;
+        }
+        #searchbar{
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!--<div position="top" ><center><h1>LigerUI基本功能界面</h1></center></div>-->
+
+        <div position="center">
+            <div id="searchbar">
+                    分司名称<input id="txtKey" type="text">
+                    <input id="btnOK" type="button" value="查询" onclick="f_search()">
+            </div>
+            <div id="maingrid"></div>
+        </div>
+        <div position="bottom" title="底部">
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            $("#container").ligerLayout({
+                leftWidth : 200,
+                isScroll:true,
+                isLeftCollapse:false,
+                allowLeftResize:false,
+                allowRightResize:false,
+                allowTopResize:false,
+                allowBottomResize:false
+            });
+        //checkbox: 是否显示复选框
+        //parentIcon: 非叶节点的图标
+        //childIcon: 叶节点的图标
+        //isexpand:是否展开
+        //treeLine:是否显示节点连接线  有点小bug
+        });
+
+        var jsonObj = {};
+        jsonObj.Rows= [
+            { id: 1, name: "林三", sex: "男", birthday: "1989/01/12",score:63.3 },
+            { id: 2, name: "陈丽", sex: "女", birthday: "1989/01/12", score: 72.2 },
+            { id: 3, name: "啊群", sex: "男", birthday: "1981/12/12", score: 43.4 },
+            { id: 4, name: "表帮", sex: "男", birthday: "1983/01/12", score: 73.2 },
+            { id: 5, name: "陈丽", sex: "女", birthday: "1989/01/12", score: 74.5 },
+            { id: 6, name: "成钱", sex: "男", birthday: "1989/11/13", score: 73.3 },
+            { id: 7, name: "都讯", sex: "女", birthday: "1989/04/2", score: 83.2 },
+            { id: 8, name: "顾玩", sex: "男", birthday: "1999/05/5", score: 93.2 },
+            { id: 9, name: "林会", sex: "男", birthday: "1969/02/2", score: 73.4 },
+            { id: 10, name: "王开", sex: "男", birthday: "1989/01/2", score: 33.3 },
+            { id: 11, name: "刘盈", sex: "女", birthday: "1989/04/2", score: 53.3 },
+            { id: 12, name: "鄂韵", sex: "男", birthday: "1999/05/5", score: 43.5 },
+            { id: 13, name: "林豪", sex: "男", birthday: "1969/02/21", score: 83.6 },
+            { id: 14, name: "王开", sex: "男", birthday: "1989/01/2", score: 93.7 },
+            { id: 15, name: "鄂酷", sex: "男", birthday: "1999/05/5", score: 61.1 },
+            { id: 16, name: "林豪", sex: "男", birthday: "1969/02/21", score: 73.3 },
+            { id: 17, name: "王开", sex: "男", birthday: "1989/01/2", score: 41.6 }
+        ];
+        var TreeDeptData = { Rows : [
+            {  name: "企划部",
+                children: [
+                    { id: '0101', name: "企划分部一", remark: "企划分部一"},
+                    { id: '0102', name: "企划分部二", remark: "企划分部二" },
+                    { id: '0103', name: "企划分部三", remark: "企划分部三" }
+                ]
+            },
+            { id: '02', name: "研发部", remark: "研发部" },
+            { id: '03', name: "产品部", remark: "产品部" }
+        ]
+        };
+        var columns =
+                [
+                    { display: '主键', name: 'id', type: 'int', mintWidth: 40, width: 100 },
+                    { display: '名字', name: 'name' ,color: 'red'},
+                    { display: '性别', name: 'sex' },
+                    { display: '生日', name: 'birthday', type: 'date' }
+                ];
+        //初始化布局与表格
+        $(f_initGrid);
+        var manager, g;
+        function f_initGrid() {
+            g = manager = $("#maingrid").ligerGrid({
+                checkbox: true,
+                columns : [
+                    { display: '部门名', name: 'name', id: 'id1', align: 'left' },
+                    { display: '部门标示', name: 'id', type: 'int', align: 'left' },
+
+                    { display: '部门描述', name: 'remark', align: 'left' }
+                ],
+                data : TreeDeptData,
+                rownumbers:true,
+                tree: { columnId: 'id1' },
+                width: '100%',
+                height: 478//注意使用“%”的区别
+            });
+        };
+        function f_search()
+        {
+            console.log(1111);
+        }
+    </script>
+</body>
+</html>
