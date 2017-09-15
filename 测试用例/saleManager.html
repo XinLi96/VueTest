@@ -19,6 +19,15 @@
             padding-left: 10px;
             padding-bottom: 10px;
         }
+        .rowFit{
+            color: #4d91e4;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .rowDetails{
+            color: #4d91e4;
+            cursor: pointer ;
+        }
     </style>
 </head>
 <body>
@@ -27,12 +36,10 @@
 
         <div position="center">
             <div id="searchbar">
-                    分司名称<input id="txtKey" type="text">
+                    分司名称<input id="txtKey" type="text" placeholder="请输入分公司名称">
                     <input id="btnOK" type="button" value="查询" onclick="f_search()">
             </div>
             <div id="maingrid"></div>
-        </div>
-        <div position="bottom" title="底部">
         </div>
     </div>
 
@@ -75,43 +82,129 @@
             { id: 17, name: "王开", sex: "男", birthday: "1989/01/2", score: 41.6 }
         ];
         var TreeDeptData = { Rows : [
-            {  name: "企划部",
+            {  name: "京津石区",
                 children: [
-                    { id: '0101', name: "企划分部一", remark: "企划分部一"},
-                    { id: '0102', name: "企划分部二", remark: "企划分部二" },
-                    { id: '0103', name: "企划分部三", remark: "企划分部三" }
+                    { id: '0101', name: "北京第一分公司", remark: "111",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "12"},
+                            { id: '0102', name: "商务二部", remark: "213" },
+                            { id: '0103', name: "商务三部", remark: "12" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "32",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "32"},
+                            { id: '0102', name: "商务二部", remark: "12" },
+                            { id: '0103', name: "商务三部", remark: "231" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "213",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "123"},
+                            { id: '0102', name: "商务二部", remark: "23" },
+                            { id: '0103', name: "商务三部", remark: "12" }
+                        ]}
                 ]
             },
-            { id: '02', name: "研发部", remark: "研发部" },
-            { id: '03', name: "产品部", remark: "产品部" }
+            {  name: "华北区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "北京第一分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ]
+            },
+            {  name: "华东区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "北京第一分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ]
+            },
+            {  name: "东北区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "北京第一分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ]
+            }
         ]
         };
-        var columns =
-                [
-                    { display: '主键', name: 'id', type: 'int', mintWidth: 40, width: 100 },
-                    { display: '名字', name: 'name' ,color: 'red'},
-                    { display: '性别', name: 'sex' },
-                    { display: '生日', name: 'birthday', type: 'date' }
-                ];
         //初始化布局与表格
         $(f_initGrid);
         var manager, g;
         function f_initGrid() {
-            g = manager = $("#maingrid").ligerGrid({
-                checkbox: true,
+            $("#maingrid").ligerGrid({
                 columns : [
-                    { display: '部门名', name: 'name', id: 'id1', align: 'left' },
-                    { display: '部门标示', name: 'id', type: 'int', align: 'left' },
-
-                    { display: '部门描述', name: 'remark', align: 'left' }
+                    { display: '分司（商务部）', name: 'name', id: 'id1', align: 'left' },
+                    { display: '收藏夹 上限（个）', name: 'id', type: 'int', align: 'left' },
+                    { display: '收藏夹 期限（天）', name: 'remark', align: 'left' },
+                    { display: '保护库-初级 上限（个）', name: 'remark', align: 'left' },
+                    { display: '保护库-高级 上限（个）', name: 'remark', align: 'left' },
+                    { display: '保护库 保护期（天）', name: 'remark', align: 'left' },
+                    { display: '保护库 绝对保护期（天）', name: 'remark', align: 'left' },
+                    { display: '意向保护库 上限（个）', name: 'remark', align: 'left' },
+                    { display: '意向保护库 期限（天）', name: 'remark', align: 'left' },
+                    { display: '操作',render: renderHandle }
                 ],
+                alternatingRow: false,
+                usePager: false,
                 data : TreeDeptData,
-                rownumbers:true,
+                checkbox: true,
                 tree: { columnId: 'id1' },
                 width: '100%',
-                height: 478//注意使用“%”的区别
+                height: 500
             });
         };
+        function renderHandle(){
+            return '<span class="rowFit">设置</span><span class="rowDetails">查看</span>';
+        }
         function f_search()
         {
             console.log(1111);
