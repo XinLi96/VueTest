@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.companyName{
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 18px;
+}
+.companies{
+    padding-left: 18px;
+    padding-top: 20px;
+}
+.companyOne{
+    width: 78px;
+    height: 35px;
+    display: inline-block;
+    background-color: #c1cfe1;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 35px;
+}
+.collectOption{
+    padding-left: 108px;
+    padding-top: 20px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(102, 102, 102);
+}
+.collectOption .infoNext{
+    padding-left: 100px;    
+}
+.protectOption{
+    padding-left: 96px;
+    padding-top: 20px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(102, 102, 102);
+}
+.protectOption .infoNext{
+    padding-left: 35px;
+}
+.protectOption1{
+    padding-left: 72px;
+    padding-top: 20px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: rgb(102, 102, 102);
+}
+.protectOption1 .infoNext{
+    padding-left: 28px;
+}
+.btn{
+    padding-left: 600px;
+    padding-top: 50px;
+}
+.qx,.confirm{
+    display: inline-block;
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+}
+.qx{
+    border: 1px solid #c7c7c7;
+    text-align: center;
+}
+.confirm{
+    background-color: #4d91e4;
+    text-align: center;
+    color: #ffffff;
+    border: 0;
+}

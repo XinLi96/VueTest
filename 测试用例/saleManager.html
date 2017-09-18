@@ -33,15 +33,11 @@
 </head>
 <body>
     <div id="container">
-        <!--<div position="top" ><center><h1>LigerUI基本功能界面</h1></center></div>-->
-
-        <div position="center">
             <div id="searchbar">
-                    分司名称<input id="txtKey" type="text" placeholder="请输入分公司名称">
-                    <input id="btnOK" type="button" value="查询" onclick="f_search()">
+                    <span style="margin-right:10px">分司名称</span><input id="txtKey" type="text" placeholder="请输入分公司名称">
+                    <input id="btnOK" type="button" style="width:50px;" value="查询" onclick="f_search()">
             </div>
             <div id="maingrid"></div>
-        </div>
     </div>
     <script>
         $(function() {
@@ -61,26 +57,6 @@
         //treeLine:是否显示节点连接线  有点小bug
         });
 
-        var jsonObj = {};
-        jsonObj.Rows= [
-            { id: 1, name: "林三", sex: "男", birthday: "1989/01/12",score:63.3 },
-            { id: 2, name: "陈丽", sex: "女", birthday: "1989/01/12", score: 72.2 },
-            { id: 3, name: "啊群", sex: "男", birthday: "1981/12/12", score: 43.4 },
-            { id: 4, name: "表帮", sex: "男", birthday: "1983/01/12", score: 73.2 },
-            { id: 5, name: "陈丽", sex: "女", birthday: "1989/01/12", score: 74.5 },
-            { id: 6, name: "成钱", sex: "男", birthday: "1989/11/13", score: 73.3 },
-            { id: 7, name: "都讯", sex: "女", birthday: "1989/04/2", score: 83.2 },
-            { id: 8, name: "顾玩", sex: "男", birthday: "1999/05/5", score: 93.2 },
-            { id: 9, name: "林会", sex: "男", birthday: "1969/02/2", score: 73.4 },
-            { id: 10, name: "王开", sex: "男", birthday: "1989/01/2", score: 33.3 },
-            { id: 11, name: "刘盈", sex: "女", birthday: "1989/04/2", score: 53.3 },
-            { id: 12, name: "鄂韵", sex: "男", birthday: "1999/05/5", score: 43.5 },
-            { id: 13, name: "林豪", sex: "男", birthday: "1969/02/21", score: 83.6 },
-            { id: 14, name: "王开", sex: "男", birthday: "1989/01/2", score: 93.7 },
-            { id: 15, name: "鄂酷", sex: "男", birthday: "1999/05/5", score: 61.1 },
-            { id: 16, name: "林豪", sex: "男", birthday: "1969/02/21", score: 73.3 },
-            { id: 17, name: "王开", sex: "男", birthday: "1989/01/2", score: 41.6 }
-        ];
         var TreeDeptData = { Rows : [
             {  name: "京津石区",
                 children: [
@@ -103,7 +79,8 @@
                             { id: '0102', name: "商务二部", remark: "23" },
                             { id: '0103', name: "商务三部", remark: "12" }
                         ]}
-                ]
+                ],
+                level:1
             },
             {  name: "华北区",
                 children: [
@@ -126,7 +103,8 @@
                             { id: '0102', name: "商务二部", remark: "商务二部" },
                             { id: '0103', name: "商务三部", remark: "商务三部" }
                         ]}
-                ]
+                ],
+                level:1
             },
             {  name: "华东区",
                 children: [
@@ -149,7 +127,8 @@
                             { id: '0102', name: "商务二部", remark: "商务二部" },
                             { id: '0103', name: "商务三部", remark: "商务三部" }
                         ]}
-                ]
+                ],
+                level:1
             },
             {  name: "东北区",
                 children: [
@@ -172,7 +151,8 @@
                             { id: '0102', name: "商务二部", remark: "商务二部" },
                             { id: '0103', name: "商务三部", remark: "商务三部" }
                         ]}
-                ]
+                ],
+                level:1
             }
         ]
         };
@@ -192,7 +172,10 @@
                     { display: '保护库 绝对保护期（天）', name: 'remark', align: 'left' },
                     { display: '意向保护库 上限（个）', name: 'remark', align: 'left' },
                     { display: '意向保护库 期限（天）', name: 'remark', align: 'left' },
-                    { display: '操作',render: renderHandle }
+                    { display: '操作',render: function (item){
+                            if(item.level != 1) return '<span class="rowFit" onclick="f_open_set()">设置</span><span class="rowDetails" onclick="f_open_view()">查看</span>';
+                        }
+                    }
                 ],
                 alternatingRow: false,
                 usePager: false,
@@ -200,12 +183,10 @@
                 checkbox: true,
                 tree: { columnId: 'id1' },
                 width: '100%',
-                height: 500
+                height: '100%'
             });
         };
-        function renderHandle(){
-            return '<span class="rowFit" onclick="f_open_set()">设置</span><span class="rowDetails" onclick="f_open_view()">查看</span>';
-        }
+        
         function f_search()
         {
             grid.options.data = $.extend(true, {}, TreeDeptData);
