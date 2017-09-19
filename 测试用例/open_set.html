@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../assets/css/open_set.css">
+    <script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script> 
+    <script src="../assets/lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="content">
@@ -72,12 +74,18 @@
                 </div>  
             </div>
             <div class="btn">
-                <input class="qx" value="取消" type="button">
+                <input class="qx" value="取消" type="button" onclick="closeDialog()">
                 <input class="confirm" type="submit" value="确认">
             </div>
-       
-       
         </form>
     </div>
+    <script>
+        // var dialog = frameElement.dialog;
+        function closeDialog(){
+            // console.log(dialog);
+            // dialog.close();
+            $.ligerDialog.close();
+        }
+    </script>
 </body>
 </html>
