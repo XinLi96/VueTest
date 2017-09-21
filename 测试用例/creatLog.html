@@ -35,7 +35,8 @@
                         <input type="text">
                     </div>
                     <div class="linkMan nextOne">
-                        <span class="redStar">*</span><span class="selectTitle">选择联系人：</span>                <div class="cardBox">
+                        <span class="redStar">*</span><span class="selectTitle">选择联系人：</span>
+                        <div class="cardBox">
                             <div class="manCard cardActive">
                                 <div class="manInfo">
                                     李先生
@@ -113,9 +114,9 @@
 
     /* 名片选择效果部分 */
     $('.manCard').click(function () {
-        $(this).addClass('cardActive').siblings().removeClass('cardActive')
-
-    })
+        $(this).addClass('cardActive').siblings().removeClass('cardActive');
+        console.log($(this));
+    });
 
 </script>
 </body>
