@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.header{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.goBack a{
+    text-decoration: none;
+}
+.header .title{
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "微软雅黑";
+}
+.company{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.comTitle{
+    font-weight: 600;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.comList{
+    width: 80%;
+    max-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.comOne{
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    background-color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.protectSet{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.setTitle{
+    font-weight: 600;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.setList{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.clientName{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    display: inline;
+    margin-right: 15px;
+}
+.clientBase span{
+    margin-right: 15px;
+    display: inline-block;
+    width: 100px;
+}
+.clientBase span input{
+    margin-right: 5px;
+}
+.rank{
+    margin-top: 20px;
+}
+.rankName{
+    font-family: "微软雅黑";
+    padding-left: 14px;
+    display: inline;
+    margin-right: 15px;
+}
+.rank span{
+    margin-right: 15px;
+    display: inline-block;
+    width: 100px;
+}
+.rank span input{
+    margin-right: 5px;
+}
+.topLimit{
+    margin-top: 20px;
+}
+.limitIn{
+    width: 85px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.protectDate{
+    margin-top: 20px;
+}
+.dateName{
+    display: inline;
+    margin-right: 15px;
+}
+.dateName1{
+    display: inline;
+    margin-right: 15px;
+    margin-left: -28px;
+}
+.sub{
+    padding-top: 20px;
+    padding-left: 75px;
+}
+.sub div{
+    width: 62px;
+    height: 36px;
+    background-color: #4d91e4;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 5px;
+}
+.footer{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.logTitle{
+    font-weight: 600;
+    font-family: "微软雅黑";
+}
+.logTable{
+    margin-top: 10px;
+}
+.logTable table{
+    border: 1px solid rgb(223, 230, 236);
+}
+.logTable table td{
+    border: 1px solid rgb(223, 230, 236);
+    text-align: center;
+    min-width: 70px;
+    height: 40px;
+}
+.logTable .head{
+    background-color: #eef1f6;
+    font-size: 16px;
+    
+}

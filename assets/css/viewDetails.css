@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+ul,ol{
+    list-style: none;
+}
+.header{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.goBack a{
+    text-decoration: none;
+}
+.header .title{
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "微软雅黑";
+}
+.nav{
+    width: 80%;
+    height: 44px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.navList li{
+    display: inline-block;
+    float: left;
+    width: 86px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer
+}
+.navList .navActive{
+    border-bottom: 0px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #6699FF;
+}
+#lastNav{
+    width: 280px;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}

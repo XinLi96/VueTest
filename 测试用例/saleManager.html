@@ -21,7 +21,7 @@
             </div>
             <div id="maingrid"></div>
             <div class="footer">
-                <div class="allSet">批量设置</div>
+                <a class="aa" href="./setUp.html"><div class="allSet">批量设置</div></a>
             </div>
     </div>
     <script>
@@ -135,7 +135,7 @@
                     { display: '默认值', name: 'remark' , align: 'left' },
                     { display: '上次修改时间', name: 'remark' , align: 'left' },
                     { display: '操作',render: function (item){
-                            if(item.level != 1) return '<a class="rowFit" href="#">设置</a><a class="rowDetails" href="#">查看</a>';
+                            if(item.level != 1) return '<a class="rowFit" href="./setUp.html">设置</a><a class="rowDetails" href="./viewDetails.html">查看</a>';
                         }
                     }
                 ],

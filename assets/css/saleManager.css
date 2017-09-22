@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.l-grid-hd-cell-inner{
+    background-color: #eef1f6;
+}
+#searchbar{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.rowFit{
+    color: #4d91e4;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.rowDetails{
+    color: #4d91e4;
+    text-decoration: none;
+}
+.footer{
+    width: 100%;
+    height: 56px;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    padding-top: 18px;
+}
+.allSet{
+    width: 89px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 36px;
+}
+.aa{
+    text-decoration: none;
+}
