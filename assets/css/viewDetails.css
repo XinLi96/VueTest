@@ -25,6 +25,9 @@ ul,ol{
     margin-left: 20px;
     margin-top: 20px;
 }
+.navList{
+    overflow: auto;
+}
 .navList li{
     display: inline-block;
     float: left;
@@ -45,7 +48,21 @@ ul,ol{
     color: #6699FF;
 }
 #lastNav{
-    width: 280px;
+    width: 350px;
     height: 44px;
     border-bottom: 1px solid #ccc;
 }
+.filter{
+    margin-top: 20px;
+}
+.filterOne{
+    display: inline-block;
+    margin-right: 30px;
+}
+.filterOne select{
+    width: 180px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ccc;
+} 
