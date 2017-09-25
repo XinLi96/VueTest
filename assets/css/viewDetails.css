@@ -21,9 +21,9 @@ ul,ol{
 }
 .nav{
     width: 80%;
-    height: 44px;
     margin-left: 20px;
     margin-top: 20px;
+    padding-bottom: 20px;
 }
 .navList{
     overflow: auto;

@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>查看</title>
     <link rel="stylesheet" href="../assets/css/viewDetails.css">
+    <script src="../assets/js/jquery-1.7.2.min.js"></script>
+    <link href="../assets/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css">
+    <link href="../assets/lib/ligerUI/skins/Aqua/css/ligerui-common.css" rel="stylesheet" type="text/css">
+    <script src="../assets/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+    <script src="../assets/lib/ligerUI/js/plugins/ligerTree.js" type="text/javascript"></script>    
 </head>
 <body>
     <div class="content">
@@ -45,20 +52,143 @@
                 </div>
             </div>
         </div>
-        <div class="content"></div>
+        <div id="maingrid"></div>
         <div class="footer"></div>
     </div>
     
     <script>
-        var x = {name:1};
-        function pro(a){
-            // a = {name:3};
-            a = 4;
+         var TreeDeptData = { Rows : [
+            {  name: "京津石区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "111",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "12"},
+                            { id: '0102', name: "商务二部", remark: "213" },
+                            { id: '0103', name: "商务三部", remark: "12" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "32",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "32"},
+                            { id: '0102', name: "商务二部", remark: "12" },
+                            { id: '0103', name: "商务三部", remark: "231" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "213",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "123"},
+                            { id: '0102', name: "商务二部", remark: "23" },
+                            { id: '0103', name: "商务三部", remark: "12" }
+                        ]}
+                ],
+                level:1
+            },
+            {  name: "华北区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "--",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "10"},
+                            { id: '0102', name: "商务二部", remark: "20" },
+                            { id: '0103', name: "商务三部", remark: "10" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ],
+                level:1
+            },
+            {  name: "华东区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "北京第一分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ],
+                level:1
+            },
+            {  name: "东北区",
+                children: [
+                    { id: '0101', name: "北京第一分公司", remark: "北京第一分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]
+                    },
+                    { id: '0102', name: "北京第二分公司", remark: "北京第二分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]},
+                    { id: '0103', name: "北京第三分公司", remark: "北京第三分公司",
+                        children: [
+                            { id: '0101', name: "商务一部", remark: "商务一部"},
+                            { id: '0102', name: "商务二部", remark: "商务二部" },
+                            { id: '0103', name: "商务三部", remark: "商务三部" }
+                        ]}
+                ],
+                level:1
+            }
+        ]};
+
+        $(f_initGrid);
+        var manager, g;
+        var grid = null;
+        function f_initGrid() {
+            grid = $("#maingrid").ligerGrid({
+                columns : [
+                    { display: '分司（商务部）', name: 'name', id: 'id1', align: 'left' },
+                    { display: '默认值', name: 'remark' , align: 'left' },
+                    { display: '上次修改时间', name: 'remark' , align: 'left' }
+                ],
+                alternatingRow: false,
+                usePager: false,
+                data : TreeDeptData,
+                checkbox: true,
+                tree: { columnId: 'id1' },
+                width: '100%',
+                height: '680px'
+            });
+        };
+        function f_search()
+        {
+            grid.options.data = $.extend(true, {}, TreeDeptData);
+            grid.loadData(f_getWhere());
         }
-        pro(x.name);
-        console.log(x.name);
+        function f_getWhere() {
+            if (!grid) return null;
+            var clause = function (rowdata, rowindex) {
+                var key = $("#txtKey").val();
+                return rowdata.name.indexOf(key) > -1;
+            };
+            return clause;
+        }
     </script>
-    <script src="../assets/js/jquery-1.7.2.min.js"></script>
     <script src="../assets/js/viewDetails.js"></script>
 </body>
 </html>
