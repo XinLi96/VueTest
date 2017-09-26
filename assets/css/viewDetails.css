@@ -6,6 +6,17 @@
 ul,ol{
     list-style: none;
 }
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+.clearfix {
+	zoom: 1
+}
 .header{
     padding-left: 20px;
     padding-top: 20px;
@@ -26,31 +37,32 @@ ul,ol{
     padding-bottom: 20px;
 }
 .navList{
-    overflow: auto;
+    border-bottom: 1px solid #ccc;
+    height: 45px;
 }
 .navList li{
-    display: inline-block;
     float: left;
     width: 86px;
     height: 44px;
     text-align: center;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
     line-height: 44px;
-    border-bottom: 1px solid #ccc;
     cursor: pointer
 }
 .navList .navActive{
     border-bottom: 0px;
+    background-color: #fff;
+    height: 45px;
+    line-height: 44px;
+    margin-bottom: -1px;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: #6699FF;
-}
-#lastNav{
-    width: 350px;
-    height: 44px;
-    border-bottom: 1px solid #ccc;
 }
 .filter{
     margin-top: 20px;
@@ -64,5 +76,5 @@ ul,ol{
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: #ccc;
+    /* color: #ccc; */
 } 

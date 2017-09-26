@@ -39,4 +39,9 @@ body{
 }
 .aa{
     text-decoration: none;
+    color: #000000;
+}
+
+.l-grid1 .l-grid-body{
+    height: 619px !important;
 }
