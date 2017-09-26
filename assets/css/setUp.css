@@ -148,5 +148,22 @@
 .logTable .head{
     background-color: #eef1f6;
     font-size: 16px;
-    
+}
+.popUp{
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    margin-left: -150px;
+    margin-top: -75px;
+}
+.yc{
+    display: none;
+}
+.popUp img{
+    margin-left: 20px;
+    margin-top: 50px;
 }
