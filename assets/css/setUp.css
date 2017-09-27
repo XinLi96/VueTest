@@ -163,7 +163,17 @@
 .yc{
     display: none;
 }
-.popUp img{
-    margin-left: 20px;
+.bgi{
     margin-top: 50px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+.bgi img{
+    margin-bottom: -15px;
+}
+.bgi span{
+    display: inline-block;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    margin-left: 30px;
 }
