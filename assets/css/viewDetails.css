@@ -6,6 +6,9 @@
 ul,ol{
     list-style: none;
 }
+.content{
+    overflow: hidden;
+}
 .clearfix:after {
 	content: ".";
 	display: block;

@@ -21,7 +21,7 @@
             </div>
             <div id="maingrid"></div>
             <div class="footer">
-                <div class="allSet"><a href="setUp.html" class="aa">批量设置</a></div>
+                <div class="allSet"><a href="javascript:getSelectRow()" class="aa">批量设置</a></div>
             </div>
     </div>
 
@@ -162,7 +162,13 @@
             };
             return clause;
         }
-        
+
+        function getSelectRow() {
+                var rows = grid.getSelecteds();
+                for (var i in rows) {
+                    console.log(rows[i]);
+                }
+        }
 
     </script>
 </body>
