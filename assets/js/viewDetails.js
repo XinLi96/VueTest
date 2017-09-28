@@ -48,6 +48,7 @@ grid = $("#maingrid").ligerGrid({
     tree: { columnId: 'id1' },
     width: '100%',
     height: '350px',
+    isScroll: false,
     alternatingRow: true,
     rowSelectable: false
 });
