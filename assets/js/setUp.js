@@ -28,10 +28,18 @@ oSub.click(function(){
             res2.push(oCheckbox2[i].value);
         }
     }
-    console.log(res2);
+    var rank = res.join('、');
+    var zs = res2.join('、');
+
+    var rankName = $('#rankName').val();
+    var dateName = $('#dateName').val();
+    var dateName1 = $('#dateName1').val();
+
+    console.log(rankName,dateName,dateName1);
+
     $('#popUp').removeClass('yc');
     setTimeout(function(){
         $('#popUp').addClass('yc');
     },1500);
-    $('#listNow').append("<tr>< <td>收藏夹</td><td>普通商务、高级商务、资深商务、客户顾问、客户主任</td> <td>正式、试用</td><td>200</td><td>2</td><td>2</td></tr>")
+    $('#listNow').append("<tr>< <td>"+radioValue+"</td><td>"+rank+"</td> <td>"+zs+"</td><td>"+rankName+"</td><td>"+dateName+"</td><td>"+dateName1+"</td></tr>")
 });
