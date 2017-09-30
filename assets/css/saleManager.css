@@ -3,7 +3,8 @@
     padding: 0;
 }
 body{
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 .l-grid-hd-cell-inner{
     background-color: #eef1f6;
