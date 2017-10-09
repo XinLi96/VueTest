@@ -165,9 +165,22 @@
 
         function getSelectRow() {
                 var rows = grid.getSelecteds();
+                var parameter = [];
                 for (var i in rows) {
-                    console.log(rows[i]);
+                    parameter.push(rows[i]);
                 }
+                console.log(parameter);
+                $.post("url",
+                {
+                    parameter: parameter
+                },
+                function(data,status){
+                    if(status){
+
+                    }else{
+
+                    }
+                });
         }
 
     </script>
