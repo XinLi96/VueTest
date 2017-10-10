@@ -70,7 +70,20 @@ return clause;
 
 $('#navList > li').click(
     function(){
+        var library = $(this).html();
+        console.log(library);
         $(this).addClass('navActive').siblings().removeClass('navActive');
+        $.post("url",
+        {
+            library: library
+        },
+        function(data,status){
+            if(status){
+    
+            }else{
+    
+            }
+        })
     }
 );
 
@@ -84,4 +97,4 @@ $('#rank').change(function(){
 
 $('#zs').change(function(){
     console.log($(this).val());
-});
+}); 
