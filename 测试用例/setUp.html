@@ -36,44 +36,50 @@
                 <div class="setList">
                     <div class="clientBase">
                         <div class="clientName">客户库：</div>
-                        <span><input type="radio" name="baseType">收藏夹</span> 
-                        <span><input type="radio" name="baseType">保护库</span>
-                        <span><input type="radio" name="baseType">意向保护库</span>
-                        <span><input type="radio" name="baseType">网站自签</span>
-                        <span><input type="radio" name="baseType">非网站自签</span>
-                        <span><input type="radio" name="baseType">网站分配</span>
-                        <span><input type="radio" name="baseType">非网站分配</span>
+                        <span><input type="radio" value="收藏夹" name="baseType">收藏夹</span> 
+                        <span><input type="radio" value="保护库" name="baseType">保护库</span>
+                        <span><input type="radio" value="意向保护库" name="baseType">意向保护库</span>
+                        <span><input type="radio" value="网站自签" name="baseType">网站自签</span>
+                        <span><input type="radio" value="非网站自签" name="baseType">非网站自签</span>
+                        <span><input type="radio" value="网站分配" name="baseType">网站分配</span>
+                        <span><input type="radio" value="非网站分配" name="baseType">非网站分配</span>
                     </div>
                     <div class="rank">
                         <div class="rankName">职级：</div>
-                        <span><input type="checkbox" name="rankArr">普通商务</span>
-                        <span><input type="checkbox" name="rankArr">高级商务</span>
-                        <span><input type="checkbox" name="rankArr">资深商务</span>
-                        <span><input type="checkbox" name="rankArr">客户顾问</span>
-                        <span><input type="checkbox" name="rankArr">客户主任</span>
+                        <span><input type="checkbox" value="普通商务" name="rankArr">普通商务</span>
+                        <span><input type="checkbox" value="高级商务" name="rankArr">高级商务</span>
+                        <span><input type="checkbox" value="资深商务" name="rankArr">资深商务</span>
+                        <span><input type="checkbox" value="客户顾问" name="rankArr">客户顾问</span>
+                        <span><input type="checkbox" value="客户主任" name="rankArr">客户主任</span>
                     </div>
                     <div class="rank">
                         <div class="rankName">正式：</div>
-                        <span><input type="checkbox" name="zs">正式</span>
-                        <span><input type="checkbox" name="zs">试用</span>
+                        <span><input type="checkbox" value="正式" name="zs">正式</span>
+                        <span><input type="checkbox" value="试用" name="zs">试用</span>
                     </div>
                     <div class="topLimit">
                         <div class="rankName">上限：</div>
-                        <span><input class="limitIn" type="text" name="" placeholder="请输入内容">个</span>
+                        <span><input class="limitIn" type="text" id="rankName" name="" placeholder="请输入内容">个</span>
                     </div>
                     <div class="protectDate">
                         <div class="dateName">保护期：</div>
-                        <span><input class="limitIn" type="text" name="" placeholder="请输入内容">天</span>
+                        <span><input class="limitIn" type="text" id="dateName" name="" placeholder="请输入内容">天</span>
                     </div>
                     <div class="protectDate">
                         <div class="dateName1">绝对保护期：</div>
-                        <span><input class="limitIn" type="text" name="" placeholder="请输入内容">天</span>
+                        <span><input class="limitIn" type="text" id="dateName1" name="" placeholder="请输入内容">天</span>
                     </div>
                     <div class="sub" id="sub">
                         <div>保存</div>
                     </div>
                 </div>
              </form>
+             <div class="popUp yc" id="popUp">
+                 <div class="bgi">
+                    <img src="../assets/img/sign-check-icon.png" alt="">
+                    <span>保存成功！</span>
+                 </div>
+             </div>
         </div>
     </div>
     <div class="footer">

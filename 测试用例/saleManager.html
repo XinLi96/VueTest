@@ -20,6 +20,9 @@
                     <input id="btnOK" type="button" style="width:50px;" value="查询" onclick="f_search()">
             </div>
             <div id="maingrid"></div>
+            <div class="footer">
+                <div class="allSet"><a href="javascript:getSelectRow()" class="aa">批量设置</a></div>
+            </div>
     </div>
 
     <script>
@@ -159,7 +162,26 @@
             };
             return clause;
         }
-        
+
+        function getSelectRow() {
+                var rows = grid.getSelecteds();
+                var parameter = [];
+                for (var i in rows) {
+                    parameter.push(rows[i]);
+                }
+                console.log(parameter);
+                $.post("url",
+                {
+                    parameter: parameter
+                },
+                function(data,status){
+                    if(status){
+
+                    }else{
+
+                    }
+                });
+        }
 
     </script>
 </body>
