@@ -7,7 +7,7 @@
         if(!year || !month){
             var today = new Date();
             year = today.getFullYear();
-            month = today.getMonth + 1;
+            month = today.getMonth() + 1;
         }
 
         var firstDay = new Date(year,month-1,1);
@@ -15,6 +15,10 @@
         if(firstDayWeekDay === 0){
             firstDayWeekDay = 7;
         }
+
+        year = firstDay.getFullYear();
+        month = firstDay.getMonth() + 1;
+
         var lastDayOfLastMonth = new Date(year,month-1,0);
         var lastDateOfLastMonth = lastDayOfLastMonth.getDate();
 
@@ -47,7 +51,11 @@
                 showDate: showDate
             })
         }
-        return ret;
+        return {
+            year: year,
+            month: month,
+            days: ret
+        };
     }
     
     window.datepicker = datepicker;

@@ -3,6 +3,11 @@
     font-size: 16px;
     color: #666;
     box-shadow: 2px 2px 8px 2px  #808080;
+    display: none;
+    position: absolute;
+}
+.ui-datepicker-wrapper-show{
+    display: block;
 }
 .ui-datepicker-wrapper .ui-datepicker-header{
     padding: 0 20px;
