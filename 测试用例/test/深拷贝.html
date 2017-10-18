@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var obj1 = {
+        name: 'lisi',
+        brother: {
+            name: 'lixin'
+        }
+    };
+
+    function clone(obj){
+        var o = {};
+        for(var p in obj){
+            if(typeof obj[p] === 'object'){
+                o[p] = arguments.callee(obj[p]);
+            }else{
+                o[p] = obj[p];
+            }
+        }
+        return o;
+    }
+
+    var obj2 = clone(obj1);
+
+    obj1.brother.name = 'wangwu';
+    console.log(obj2.brother.name);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var str1 = '<h1>Welcome {{name}}</h1>';
+        // var str2 = '{"name":"Qunar-Man"}';
+
+        // if(str1 == '<h1>Welcome {{name}}</h1>' && str2 == '{"name":"Qunar-Man"}'){
+        //     console.log('<h1>Welcome Qunar-Man</h1>');
+        // }else{
+
+        // }   
+
+        var n = 5;
+        var inpu = ['2.1.4','2.5.7','3.4.6','2.1.8','2.1.0'];
+        var obj = {};
+
+        for(let i = 0;i < n;i++){
+             obj[i] = inpu[i].split('.');
+        }
+        console.log(obj);
+        var test = '2.1.*';
+        var arr1 = test.split('.');
+
+        console.log(arr1);
+
+        for(prop in obj){
+            if(arr1[0] == '*'){
+                console.log(obj[prop].join('.'));                
+            }else if(arr1[0] == obj[prop][0] && arr1[1] == '*'){
+                console.log(obj[prop].join('.')); 
+            }else if(arr1[0] == obj[prop][0] && arr1[1] == obj[prop][1] && arr1[2] == '*'){
+                console.log(obj[prop].join('.')); 
+            }else if(arr1[0] == obj[prop][0] && arr1[1] == obj[prop][1] && arr1[2] == obj[prop][2]){
+                console.log(obj[prop].join('.')); 
+            }
+        }
+
+    </script>
+</body>
+</html>

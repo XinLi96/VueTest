@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>九宫格布局</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style media="screen">
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            padding-top: 4px;
+        }
+        .ceil{
+            box-sizing: border-box;
+            border: 4px solid #ccc;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: -4px;
+            margin-top: -4px;
+        }
+        .ceil:nth-child(3n+1){
+            margin-left: 0;
+        }
+        .ceil:hover{
+            border-color: red;
+            z-index: 2
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="ceil">1</div>
+    <div class="ceil">2</div>
+    <div class="ceil">3</div>
+    <div class="ceil">4</div>
+    <div class="ceil">5</div>
+    <div class="ceil">6</div>
+    <div class="ceil">7</div>
+    <div class="ceil">8</div>
+    <div class="ceil">9</div>
+</section>
+</body>
+</html>

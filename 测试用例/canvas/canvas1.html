@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000"></canvas>
+
+    <script>
+        var c = document.getElementById('myCanvas');
+        var ctx = c.getContext("2d");
+        // ctx.fillStyle = "#ff0000";
+        // ctx.fillRect(0,0,150,75);
+
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(150,150);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.arc(95,50,40,0,2*Math.PI);
+        // ctx.stroke();
+
+        // ctx.font="30px Arial";
+        // ctx.strokeText("Hello World",10,50);
+
+        // 创建渐变
+        var grd=ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        
+        // 填充渐变
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+
+    </script>
+</body>
+</html>

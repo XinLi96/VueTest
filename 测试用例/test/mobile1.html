@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100%;
+            background-color: #e02a2a;
+            color: #ffffff;
+            font-family: "微软雅黑";
+            height: 70px;
+            font-size: 25px;
+            text-align: center;
+            line-height: 70px;
+            position: fixed;
+            top: 0;
+        }
+        .content{
+            width: 100%;
+            margin-top: 70px;
+        }
+        .personInfo{
+            padding-bottom: 20px;
+            overflow: auto;
+        }
+        .infoLeft{
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .infoRight{
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #a8a8a8;
+        }
+        .list{
+            margin-left: 5%;
+        }
+        .listOne{
+            width: 95%;
+            border-top: 1px solid #bbbbbb;
+            overflow: auto;
+        }
+        .oneLeft{
+           float: left; 
+           margin-top: 20px;
+        }
+        .oneRight{
+           float: left; 
+           margin-top: 30px;
+           margin-left: 20px;
+           font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">考勤管理</div>
+    <div class="content">
+        <div class="personInfo">
+            <div class="infoLeft"><img src="./11.png" alt=""></div>
+            <div class="infoRight">
+                <div class="infoType">考勤类型：正常考勤（弹性）</div>
+                <div class="infoType">弹性时间：09:00-09:30<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18:00-18:30</div>
+                <div class="infoType">缺勤： 条</div>
+                <div class="infoType">年假：天/年&nbsp;&nbsp;&nbsp;已休： 天</div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="listOne">
+                    <div class="oneLeft"><img src="./33.png" alt=""></div>
+                    <div class="oneRight">缺勤与请假</div>
+            </div>
+        </div>
+        <div class="list">
+                <div class="listOne">
+                        <div class="oneLeft"><img src="./22.png" alt=""></div>
+                        <div class="oneRight">审批</div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
