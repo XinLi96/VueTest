@@ -75,22 +75,30 @@
     <div class="header">我的云会议</div>
     <div class="nav">点击链接拨打电话并输入密码参与会议</div>
     <div class="content">
-        <div class="list1 active">
+        <div class="list1 active" id="parent">
             <div class="list1Title">测试007</div>
             <div class="list1Time">预定时间：2017-10-11 14:30-14:40</div>
             <div class="list1Pass">密码：84623902</div>
         </div>
-        <div class="list1">
-            <div class="list1Title">测试007</div>
+        <div class="list1" id="parent">
+            <div class="list1Title">测试008</div>
             <div class="list1Time">预定时间：2017-10-11 14:30-14:40</div>
             <div class="list1Pass">密码：84623902</div>
         </div>
-        <div class="list1">
-            <div class="list1Title">测试007</div>
+        <div class="list1" id="parent">
+            <div class="list1Title">测试009</div>
             <div class="list1Time">预定时间：2017-10-11 14:30-14:40</div>
             <div class="list1Pass">密码：84623902</div>
         </div>
     </div>
     <div class="footer">申请会议</div>
+
+    <script src="./jquery-1.7.2.min.js"></script>
+    <script>
+        $('.list1').click(function(){
+            var get = $(this).find(".list1Title").html();
+            console.log(get);
+        })
+    </script>
 </body>
 </html>
