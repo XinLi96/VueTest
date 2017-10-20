@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #ebebeb;
+        }
+        .header{
+            width: 100%;
+            background-color: #e02a2a;
+            color: #ffffff;
+            font-family: "微软雅黑";
+            height: 70px;
+            font-size: 25px;
+            text-align: center;
+            line-height: 70px;
+            position: fixed;
+            top: 0;
+        }
+        .hLeft{
+            float: left;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+        .hRight{
+            float: right;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .content{
+            margin-top: 90px;
+            width: 100%;
+        }
+        .dateTime{
+            width: 100%;
+            background-color: #ffffff;
+            height: 40px;
+            padding-top: 10px;
+        }
+        .title{
+            margin-left: 20px;
+            color: #b6b6b6;
+            font-size: 15px;
+        }
+        .dValue{
+            float: right;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .selects{
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+        .line{
+            width: 90%;
+            height: 1px;
+            border-top: 1px solid #dfdfdf;
+            margin-left: 5%;
+        }
+        .details{
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding-top: 10px;
+        }
+        .in{
+            border: 0;
+        }
+        .details span{
+            display: inline-block;
+            height: 100%;
+            vertical-align: top
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="hLeft">取消</span>请假<span class="hRight">提交</span>
+    </div>
+    <div class="content">
+        <div class="dateTime">
+            <span class="title">日期：</span>
+            <span class="dValue">2017/09/26</span>
+        </div>
+        <div class="selects">
+            <div class="dateTime">
+                <span class="title">开始时间：</span>
+                <span class="dValue">09:30</span>
+            </div>
+            <div class="line"></div>
+            <div class="dateTime">
+                <span class="title">结束时间：</span>
+                <span class="dValue">18:30</span>
+            </div>
+            <div class="line"></div>
+            <div class="dateTime">
+                <span class="title">假种：</span>
+                <span class="dValue">wweds</span>
+            </div>
+        </div>
+        <div class="selects">
+            <div class="dateTime">
+                <span class="title">审批人：</span>
+                <span class="dValue">XXX</span>
+            </div>
+        </div>
+        <div class="details">
+            <span class="title">说明</span>
+            <textarea name="" id="" cols="45" rows="8" class="in"></textarea>
+        </div>
+    </div>
+</body>
+</html>
