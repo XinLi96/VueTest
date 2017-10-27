@@ -15,6 +15,22 @@
         
         console.log("a defined? " + (typeof a !== 'undefined'));
         console.log("b defined? " + (typeof b !== 'undefined'));
+
+        function func(a, a) {
+            console.log(a);
+        }
+
+        func("Hello", "World");
+
+        // var arr = new Array(10);
+        // for(var i = 0; i < arr.length; i++) {
+        //     arr[i] = i;
+        // }
+        // console.dir(arr);
+
+        var arr = new Array(10);
+        arr = arr.map(function(item, index) { return index; });
+        console.dir(arr);
     </script>
 </body>
 </html>
