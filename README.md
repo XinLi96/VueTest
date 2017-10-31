@@ -24,6 +24,7 @@ web前端整理
 * [便利蜂面经](https://github.com/XinLi96/VueTest/blob/master/前端整理/便利蜂面经.md)
 * [练习笔记](https://github.com/XinLi96/VueTest/blob/master/前端整理/练习笔记.md)
 * [项目遇到问题](https://github.com/XinLi96/VueTest/blob/master/前端整理/项目遇到问题.md)
+* [vue的面试问题](https://github.com/XinLi96/VueTest/blob/master/前端整理/vue的面试问题.md)
 
 每一个努力的人都会有属于自己的一片天。
 
