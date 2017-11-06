@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: url(./img/ph-bgc.png) repeat;
+        }
+        .c-per{
+            width: 57%;
+            height: 47.3%;
+            position: absolute;
+            left: 22%;
+            top: 13.6%;
+        }
+        .c-font{
+            width: 88%;
+            height: 17%;
+            position: absolute;
+            left: 6.6%;
+            top: 69.3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="./img/ph-per.png" alt="" class="c-per">
+        <img src="./img/ph-font.png" alt="" class="c-font">
+    </div>
+
+    <script>
+    function bind(ww,old){
+        return function(){
+                return old.apply(ww,arguments); 
+            }
+        }
+    
+    </script>
+</body>
+</html>
