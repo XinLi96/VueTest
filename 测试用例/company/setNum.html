@@ -23,55 +23,251 @@
             background-color: #ebebeb;
             font-weight: bold;
         }
+        .con{
+            width: 100%;
+            height: 100%;
+            padding-left: 10px;
+            padding-top: 10px;
+            text-align: left;
+        }
+        .one{
+            padding-left: 30px;
+        }
+        .one input{
+            width: 50px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .title{
+            padding-top: 50px;
+        }
+        .down{
+            padding-top: 10px;
+        }
+        .oneDetails{
+            padding-left: 60px;
+        }
+        .oneDetails input{
+            width: 40px;
+        }
+        .conSearch button{
+            width: 60px;
+            margin-top: 20px;
+            margin-left: 140px;
+        }
+        .monthDetail{
+            width: 100%;
+            height: 100%;
+        }
+        .mLeft,.mCenter,.mRight{
+            float: left;
+            width: 33.3%;
+            height: 100%;
+        }
+        .mLeft div{
+            margin-top: 8%;
+        }
+        .mRight button{
+            margin-top: 8%;
+            width: 60px;
+        }
+        .mCenter input{
+            width: 30px;
+        }
     </style>
 </head>
 <body>
     <table border="1">
         <tr>
             <td class="head" style="width:20%">年度</td>
-            <td class="head" style="width:50%">年度参数</td>
+            <td class="head" style="width:35%">年度参数</td>
             <td class="head">月度参数</td>
         </tr>
         <tr>
-            <td rowspan="12">2017-2018年度</td>
+            <td rowspan="12"><a href="">2017-2018</a>年度</td>
             <td rowspan="12">
-                商务：<br>
-                &nbsp;&nbsp;每1000元
+                <div class="con">
+                    <div>商务：</div>
+                    <div class="one">每<input type="text" value="1000">元净现金到账折算为1分</div>
+                    <div class="title">部门：</div>
+                    <div class="one">每<input type="text" value="1000">元净现金到账折算为1分</div>
+                    <div class="one down">考核期部门月度基准值：</div>
+                    <div class="oneDetails down">一类公司：<input type="text" value="18">万</div>
+                    <div class="oneDetails">二类公司：<input type="text" value="14">万</div> 
+                    <div class="oneDetails">三类公司：<input type="text" value="16">万</div> 
+                    <div class="one down">调整期部门月度基准值：</div>
+                    <div class="oneDetails down">一类公司：<input type="text" value="6">万</div>
+                    <div class="oneDetails">二类公司：<input type="text" value="2">万</div> 
+                    <div class="oneDetails">三类公司：<input type="text" value="4">万</div> 
+                    <div class="conSearch"><button>提交</button></div>
+                </div>
             </td>
-            <td>2017年5月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年5月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年6月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年6月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年7月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年7月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：<input type="text" value="1"> </div>
+                        <div>部门积分系数：<input type="text" value="1"> </div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年8月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年8月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年9月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年9月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年10月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年10月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年11月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年11月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年12月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年12月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年1月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年1月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年2月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年2月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年3月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年3月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
         <tr>
-            <td>2017年4月</td>
+            <td>
+                <div class="monthDetail">
+                    <div class="mLeft"><div>2017年4月</div></div>
+                    <div class="mCenter">
+                        <div>商务积分系数：1</div>
+                        <div>部门积分系数：1</div>   
+                    </div>
+                    <div class="mRight">
+                        <button>提交</button>
+                    </div>
+                </div>
+            </td>
         </tr>
     </table>
 </body>
