@@ -205,11 +205,11 @@
     <script src="./js/jquery-1.7.2.min.js"></script>
     <script>
         var data = new Date();
-        console.log(data.getFullYear() + ' '+ (data.getMonth()+1) );
+        // console.log(data.getFullYear() + ' '+ (data.getMonth()+1) );
         
         var objs = $('.monthDetail');
         for(var i = 0;i < objs.length;i++){
-            console.log(objs.eq(i).attr('data-num'));
+            // console.log(objs.eq(i).attr('data-num'));
             if((data.getMonth()+1) != objs.eq(i).attr('data-num')){
                 objs.eq(i).find('input').addClass('hideInput').attr('disabled','disabled');
                 // objs.eq(i).find('input').addClass('disabled');
