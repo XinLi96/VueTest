@@ -5,76 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        html,body{
-            height: 100%;
-        }
-        table{
-            width: 100%;
-            height: 80%;
-            text-align: center; 
-            border-collapse:collapse;
-        }
-        .head{
-            background-color: #ebebeb;
-            font-weight: bold;
-        }
-        .con{
-            width: 100%;
-            height: 100%;
-            padding-left: 10px;
-            padding-top: 10px;
-            text-align: left;
-        }
-        .one{
-            padding-left: 30px;
-        }
-        .one input{
-            width: 50px;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-        .title{
-            padding-top: 50px;
-        }
-        .down{
-            padding-top: 10px;
-        }
-        .oneDetails{
-            padding-left: 60px;
-        }
-        .oneDetails input{
-            width: 40px;
-        }
-        .conSearch button{
-            width: 60px;
-            margin-top: 20px;
-            margin-left: 140px;
-        }
-        .monthDetail{
-            width: 100%;
-            height: 100%;
-        }
-        .mLeft,.mCenter,.mRight{
-            float: left;
-            width: 33.3%;
-            height: 100%;
-        }
-        .mLeft div{
-            margin-top: 8%;
-        }
-        .mRight button{
-            margin-top: 8%;
-            width: 60px;
-        }
-        .mCenter input{
-            width: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/setNum.css">
 </head>
 <body>
     <table border="1">
@@ -84,7 +15,7 @@
             <td class="head">月度参数</td>
         </tr>
         <tr>
-            <td rowspan="12"><a href="">2017-2018</a>年度</td>
+            <td rowspan="12"><a href="#" id='year'></a>年度</td>
             <td rowspan="12">
                 <div class="con">
                     <div>商务：</div>
@@ -103,11 +34,11 @@
                 </div>
             </td>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年5月</div></div>
+                <div class="monthDetail" data-num="5">
+                    <div class="mLeft"><div><span class="setYear"></span>年5月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -117,11 +48,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年6月</div></div>
+                <div class="monthDetail" data-num="6">
+                    <div class="mLeft"><div><span class="setYear"></span>年6月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -131,8 +62,8 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年7月</div></div>
+                <div class="monthDetail" data-num="7">
+                    <div class="mLeft"><div><span class="setYear"></span>年7月</div></div>
                     <div class="mCenter">
                         <div>商务积分系数：<input type="text" value="1"> </div>
                         <div>部门积分系数：<input type="text" value="1"> </div>   
@@ -145,11 +76,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年8月</div></div>
+                <div class="monthDetail" data-num="8">
+                    <div class="mLeft"><div><span class="setYear"></span>年8月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -159,11 +90,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年9月</div></div>
+                <div class="monthDetail" data-num="9">
+                    <div class="mLeft"><div><span class="setYear"></span>年9月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -173,11 +104,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年10月</div></div>
+                <div class="monthDetail" data-num="10">
+                    <div class="mLeft"><div><span class="setYear"></span>年10月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -187,11 +118,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年11月</div></div>
+                <div class="monthDetail" data-num="11">
+                    <div class="mLeft"><div><span class="setYear"></span>年11月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -201,11 +132,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年12月</div></div>
+                <div class="monthDetail" data-num="12">
+                    <div class="mLeft"><div><span class="setYear"></span>年12月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -215,11 +146,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年1月</div></div>
+                <div class="monthDetail" data-num="1">
+                    <div class="mLeft"><div><span class="setYear"></span>年1月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -229,11 +160,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年2月</div></div>
+                <div class="monthDetail" data-num="2">
+                    <div class="mLeft"><div><span class="setYear"></span>年2月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -243,11 +174,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年3月</div></div>
+                <div class="monthDetail" data-num="3">
+                    <div class="mLeft"><div><span class="setYear"></span>年3月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -257,11 +188,11 @@
         </tr>
         <tr>
             <td>
-                <div class="monthDetail">
-                    <div class="mLeft"><div>2017年4月</div></div>
+                <div class="monthDetail" data-num="4">
+                    <div class="mLeft"><div><span class="setYear"></span>年4月</div></div>
                     <div class="mCenter">
-                        <div>商务积分系数：1</div>
-                        <div>部门积分系数：1</div>   
+                        <div>商务积分系数：<input type="text" value="1"></div>
+                        <div>部门积分系数：<input type="text" value="1"></div>   
                     </div>
                     <div class="mRight">
                         <button>提交</button>
@@ -270,5 +201,30 @@
             </td>
         </tr>
     </table>
+
+    <script src="./js/jquery-1.7.2.min.js"></script>
+    <script>
+        var data = new Date();
+        console.log(data.getFullYear() + ' '+ (data.getMonth()+1) );
+        
+        var objs = $('.monthDetail');
+        for(var i = 0;i < objs.length;i++){
+            console.log(objs.eq(i).attr('data-num'));
+            if((data.getMonth()+1) != objs.eq(i).attr('data-num')){
+                objs.eq(i).find('input').addClass('hideInput').attr('disabled','disabled');
+                // objs.eq(i).find('input').addClass('disabled');
+                objs.eq(i).find('button').addClass('hideBtn');
+            }else{
+                objs.eq(i).find('input').removeClass('hideInput').removeAttr('disabled');
+                objs.eq(i).find('button').removeClass('hideBtn');
+            }
+        }
+        var str = data.getFullYear() + '-' + (data.getFullYear()+1);
+        $('#year').html(str)
+
+        for(var i = 0;i < $('.setYear').length;i++){
+            $('.setYear').eq(i).html(data.getFullYear());
+        }
+    </script>
 </body>
 </html>
