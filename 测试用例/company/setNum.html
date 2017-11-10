@@ -19,18 +19,18 @@
             <td rowspan="12">
                 <div class="con">
                     <div>商务：</div>
-                    <div class="one">每<input type="text" value="1000">元净现金到账折算为1分</div>
+                    <div class="one">每<input type="text" class="getNum" value="">元净现金到账折算为1分</div>
                     <div class="title">部门：</div>
-                    <div class="one">每<input type="text" value="1000">元净现金到账折算为1分</div>
+                    <div class="one">每<input type="text" class="getNum" value="">元净现金到账折算为1分</div>
                     <div class="one down">考核期部门月度基准值：</div>
-                    <div class="oneDetails down">一类公司：<input type="text" value="18">万</div>
-                    <div class="oneDetails">二类公司：<input type="text" value="14">万</div> 
-                    <div class="oneDetails">三类公司：<input type="text" value="16">万</div> 
+                    <div class="oneDetails down">一类公司：<input type="text" class="getNum" value="">万</div>
+                    <div class="oneDetails">二类公司：<input type="text" class="getNum" value="">万</div> 
+                    <div class="oneDetails">三类公司：<input type="text" class="getNum" value="">万</div> 
                     <div class="one down">调整期部门月度基准值：</div>
-                    <div class="oneDetails down">一类公司：<input type="text" value="6">万</div>
-                    <div class="oneDetails">二类公司：<input type="text" value="2">万</div> 
-                    <div class="oneDetails">三类公司：<input type="text" value="4">万</div> 
-                    <div class="conSearch"><button>提交</button></div>
+                    <div class="oneDetails down">一类公司：<input type="text" class="getNum" value="">万</div>
+                    <div class="oneDetails">二类公司：<input type="text" class="getNum" value="">万</div> 
+                    <div class="oneDetails">三类公司：<input type="text" class="getNum" value="">万</div> 
+                    <div class="conSearch"><button id="yearBtn">提交</button></div>
                 </div>
             </td>
             <td>
@@ -208,15 +208,15 @@
         // console.log(data.getFullYear() + ' '+ (data.getMonth()+1) );
         
         var objs = $('.monthDetail');
-        for(var i = 0;i < objs.length;i++){
+        for(var i = 0;i < objs.length;i++){//判断哪个月可以被修改是否显示按钮和可编辑
             // console.log(objs.eq(i).attr('data-num'));
             if((data.getMonth()+1) != objs.eq(i).attr('data-num')){
                 objs.eq(i).find('input').addClass('hideInput').attr('disabled','disabled');
                 // objs.eq(i).find('input').addClass('disabled');
                 objs.eq(i).find('button').addClass('hideBtn');
             }else{
-                objs.eq(i).find('input').removeClass('hideInput').removeAttr('disabled');
-                objs.eq(i).find('button').removeClass('hideBtn');
+                objs.eq(i).find('input').removeClass('hideInput').removeAttr('disabled').addClass('getInput');
+                objs.eq(i).find('button').removeClass('hideBtn').addClass('getBtn');
             }
         }
         var str = data.getFullYear() + '-' + (data.getFullYear()+1);
@@ -225,6 +225,53 @@
         for(var i = 0;i < $('.setYear').length;i++){
             $('.setYear').eq(i).html(data.getFullYear());
         }
+        
+        var r = /^\+?[1-9][0-9]*$/;　
+        var oGetNums =  $('.getNum');
+        var flag = true;
+
+        $('#yearBtn').on('click',function(){//年度值判断是否为空或为整数
+            for(var i = 0;i < oGetNums.length;i++){
+                if(oGetNums.eq(i).val() === ""){
+                    flag=false;
+                    alert('输入值不可以为空');
+                    return;
+                }else{
+                    if(r.test(oGetNums.eq(i).val())){
+                        flag=true;
+                    }else{
+                        flag=false;
+                        alert('输入值必须为整数');
+                        return;
+                    }
+                }
+            }
+            if(flag){
+                console.log('success');            
+            }
+        });
+        
+        var mon = true;
+        $('.getBtn').eq(0).on('click',function(){//月度值判断是否为空或者为整数
+            for(var i = 0;i < $('.getInput').length;i++){
+                if($('.getInput').eq(i).val() === ""){
+                    mon=false;
+                    alert('输入值不可以为空');
+                    return;
+                }else{
+                    if(r.test($('.getInput').val())){
+                        mon=true;
+                    }else{
+                        mon=false;
+                        alert('输入值必须为整数');
+                        return;
+                    }
+                }
+            }
+            if(mon){
+                console.log('success month');            
+            }
+        });
     </script>
 </body>
 </html>
