@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        前端根据ip地址判断是哪个地区的方法？
+        1.通过jsonp的返回，response.ip和response.city
+        2.通过ip地址个ip地址库作查询
+        */
+        var tree = {
+            value: 1,
+            left: {
+                value: 2,
+                left: {
+                value: 4
+                }
+            },
+            right: {
+                value: 3,
+                left: {
+                value: 5,
+                left: {
+                    value: 7
+                },
+                right: {
+                    value: 8
+                }
+                },
+                right: {
+                value: 6
+                }
+            }
+        }
+
+        var preOrder = function (node) {
+            if (node) {
+              console.log(node.value);
+              preOrder(node.left);
+              preOrder(node.right);
+            }
+        }
+
+        var inOrder = function (node) {
+            if (node) {
+                inOrder(node.left);
+                console.log(node.value);
+                inOrder(node.right);
+            }
+        }
+
+        var postOrder = function (node) {
+            if (node) {
+                postOrder(node.left);
+                postOrder(node.right);
+                console.log(node.value);
+            }
+        }
+        postOrder(tree);
+    </script>
+</body>
+</html>
