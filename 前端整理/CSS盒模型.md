@@ -2,7 +2,7 @@ CSS盒模型
 =====
 基本概念:标准模型+IE模型
 
-标准模型和IE模型区别<br>
+标准模型和IE模型区别
 * 标准模型的宽度是content
 * IE模型的宽和高是content+padding+border
 

@@ -28,5 +28,21 @@
 
         </div>
     </div>
+
+    <script>
+        var i = document.documentElement.outerHTML;
+        // console.log(i);
+
+        function getDaysInOneMonth(year, month){  
+            month = parseInt(month, 10);  
+            var d= new Date(year, month, 0);  
+            return d.getDate();  
+        }
+
+        // console.log(getDaysInOneMonth(2017,12));
+
+        sessionStorage.setItem('name','lixin');
+        console.log(sessionStorage.getItem('name'));
+    </script>
 </body>
 </html>

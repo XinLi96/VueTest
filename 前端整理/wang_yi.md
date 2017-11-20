@@ -23,3 +23,21 @@ netease
 引用数据类型：
 * object
 * 保存的是一个地址，地址中存的内容不一定是什么
+
+获取网页中的所有的源码？
+* document.documentElement.outerHTML
+
+JavaScript获取某年某月共有多少天？
+```
+function getDaysInOneMonth(year, month){  
+    month = parseInt(month, 10);  
+    var d= new Date(year, month, 0);  
+    return d.getDate();  
+}
+```
+
+* every() ：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true ，则返回 true 。(每一项都必须符合)
+* filter() ：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
+* forEach() ：对数组中的每一项运行给定函数。这个方法没有返回值。
+* map() ：对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。
+* some() ：对数组中的每一项运行给定函数，如果该函数对任一项返回 true ，则返回 true 。(至少有一项符合就可以)
