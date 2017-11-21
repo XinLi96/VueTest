@@ -36,6 +36,7 @@ function getDaysInOneMonth(year, month){
 }
 ```
 
+
 * every() ：对数组中的每一项运行给定函数，如果该函数对每一项都返回 true ，则返回 true 。(每一项都必须符合)
 * filter() ：对数组中的每一项运行给定函数，返回该函数会返回 true 的项组成的数组。
 * forEach() ：对数组中的每一项运行给定函数。这个方法没有返回值。
