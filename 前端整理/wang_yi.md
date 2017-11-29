@@ -60,3 +60,18 @@ y=(60-2x)x
 （60-x）x=y
 当x=30时最多，y为900+1800=2700元
 ````
+
+````
+var name = "the window";
+var obj = {
+    name: "my obj",
+    getNameFunc: function(){
+        return function(){
+            return this.name;
+        };
+    }
+};
+console.log(obj.getNameFunc()());//the window
+````
+
+在eval()中创建的任何变量或函数都不会被提升。
