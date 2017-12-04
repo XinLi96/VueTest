@@ -82,3 +82,5 @@ overflow的可取值?
 * scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
 * auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
 * inherit 规定应该从父元素继承 overflow 属性的值。
+
+在前端使用localstorage实现本地存储功能的时候，localstorage存储的内容都是字符串，所以想要存储对象时，需要使用Json.stringfy()将对象转成字符串存进去，取出来的时候使用Json.parse()将字符串转换成对象。
