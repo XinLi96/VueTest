@@ -84,3 +84,48 @@ overflow的可取值?
 * inherit 规定应该从父元素继承 overflow 属性的值。
 
 在前端使用localstorage实现本地存储功能的时候，localstorage存储的内容都是字符串，所以想要存储对象时，需要使用Json.stringfy()将对象转成字符串存进去，取出来的时候使用Json.parse()将字符串转换成对象。
+
+在h5微信端时，辨别分享到朋友圈和好友的函数。
+````
+//微信客户端
+    document.addEventListener('WeixinJSBridgeReady', function() {
+        var shareObj = {
+            title : "长宁区十大新闻人物评选：我刚刚为XXX点亮了梦想……",
+            desc : "长宁区十大新闻人物正在评选，有你认识的人吗？",
+            url : "http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html",
+            image : "http://nos.netease.com/fps-pro/frontends/local_special/cn_vote/img/info_head.png"
+        }
+
+        var arrName = JSON.parse(localStorage.getItem('shareName'));
+        var friendTitle = '我刚刚为XXX点亮了梦想……';
+        var shareTitle = shareObj.title;
+        if(arrName.length > 0){
+            shareTitle = shareTitle.replace(/XXX/ig,arrName[arrName.length-1]);
+            friendTitle = friendTitle.replace(/XXX/ig,arrName[arrName.length-1]);
+        }
+        // 分享到朋友圈;
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                'img_url': shareObj.image,
+                'img_width': '300',
+                'img_height': '300',
+                'link': shareObj.url,
+                'title': shareTitle
+            }, function() {
+                share_survey(true);
+            });
+        });
+        // 发送给好友;
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                'img_url': shareObj.image,
+                'link': shareObj.url,
+                'desc': shareObj.desc,
+                'title': friendTitle
+            }, function() {
+                //callBack
+                share_survey(true);
+            });
+        });
+    }, false);
+````
