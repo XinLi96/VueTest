@@ -129,3 +129,32 @@ overflow的可取值?
         });
     }, false);
 ````
+
+重写滚动条样式。
+````
+.personList::-webkit-scrollbar-track-piece {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+.personList::-webkit-scrollbar {
+    width: 5px;
+    height: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .personList::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    background-clip: padding-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    min-height: 28px;
+  }
+  .personList::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+````
