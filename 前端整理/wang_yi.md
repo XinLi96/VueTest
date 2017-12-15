@@ -158,3 +158,15 @@ overflow的可取值?
     border-radius: 5px;
   }
 ````
+
+锚点的应用：适用于点击菜单使页面滑动到相应的部分(页面内和其它页面的都可以)
+````
+<a href="#div1"></a>
+<a href="#div2"></a>
+<div id="div1"></div>
+<div id="div2"></div>
+````
+
+使用js获取页面内background-image属性值时，在pc端和移动端的输出值不一样
+* pc端：url("地址")
+* 移动端：url(地址)
