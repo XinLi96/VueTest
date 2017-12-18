@@ -130,7 +130,7 @@ overflow的可取值?
     }, false);
 ````
 
-重写滚动条样式。
+重写滚动条样式(滚动条默认在移动端是不显示的)。
 ````
 .personList::-webkit-scrollbar-track-piece {
     background-color: rgba(255, 255, 255, 0.3);
