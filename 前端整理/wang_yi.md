@@ -172,3 +172,17 @@ overflow的可取值?
 * 移动端：url(地址)
 
 重写原型对象切断了现有原型与任何之前已经存在的对象实例之间的联系；他们引用的仍然是最初的原型。
+
+JavaScript实现斐波那契数列？
+````
+function fb(n){
+    if(n === 0){
+        return 0;
+    }else if(n === 1){
+        return 1;
+    }else{
+        return fb(n-1)+fb(n-2);
+    }
+}
+console.log(fb(8));
+````
