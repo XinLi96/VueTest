@@ -2,23 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=no"/>
     <title>Document</title>
+    <link rel="stylesheet" href="http://nos.netease.com/fps-pro/frontends/libs/swiper/swiper-3.4.2.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper{
+            width: 100%;
+            height: 100%;
+        }
+        .div1{
+            width: 100%;
+            height: 100%;
+            background-color: #f0ec11;
+            position: relative;
+        }
+        .btn{
+            width: 100px;
+            height: 50px;
+            background-color: #544545;
+            color: #ffffff;
+            font-size: 28px;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            left: 50%;
+            bottom: 20px;
+            margin-left: -50px;
+        }
+        .div2{
+            width: 100%;
+            height: 100%;
+            background-color: #10e060;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="content">
+        <div class="wrapper" id="wrapper">
+            <div class="div1">
+                <div class="btn">click</div>
+            </div>
+            <div class="div2"></div>
+        </div>
+    </div>
+
+
+    <script src="http://nos.netease.com/fps-pro/frontends/libs/swiper/swiper-3.4.2.min.js"></script>
+    <script src="http://nos.netease.com/fps-pro/frontends/libs/jquery/jquery-2.2.4.min.js"></script>
+    <script src="./pageSwitch.js"></script>
     <script>
-        function fb(n){
-            if(n === 0){
-                return 0;
-            }else if(n === 1){
-                return 1;
-            }else{
-                return fb(n-1)+fb(n-2);
-            }
-        }
-        console.log(fb(8));
+        var pw=new pageSwitch('wrapper',{
+            direction:0,			//int 页面切换方向，0横向，1纵向
+            start:0,				//int 默认显示页面
+            loop:false,				//bool 是否循环切换
+            ease:'ease',			//string|function 过渡曲线动画，详见下方说明
+            transition:'flip',		//string|function转场方式，详见下方说明
+            freeze:false,			//bool 是否冻结页面（冻结后不可响应用户操作，可以通过 `.freeze(false)` 方法来解冻）
+            mouse:true,				//bool 是否启用鼠标拖拽
+            mousewheel:false,		//bool 是否启用鼠标滚轮切换
+            arrowkey:false,			//bool 是否启用键盘方向切换
+            autoplay:false,	    	//bool 是否自动播放幻灯 新增
+        });
+
+        $('.btn').on('click',function(){
+            console.log('替换动画');
+            setTimeout(function(){
+                pw.next();
+                console.log('翻面了');
+            },2000);
+        });
+        // var str = 'http://u.boy.im/pageswitch/pic.html?ts=flip3d';
+        // var reg=str.match(/ts=([^&]*)/),
+	    //     ts=reg&&reg[1]||'flipClock',
+        //     res = /flip(?!Paper)/.test(ts)?'bounce':'ease';
+        //     console.log(res+ '  ' +ts);
     </script>
 </body>
 </html>
