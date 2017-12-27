@@ -190,3 +190,32 @@ console.log(fb(8));
 arguments.callee是一个指向正在执行的函数的指针(可以用它来实现对递归函数的调用)
 
 闭包是指有权访问另一个函数作用域中的变量的函数
+
+处理帧动画需要使用css3的animation属性，在此属性中时间变化曲线设置为step（n），一般n为动画分为多少帧就是多少，以达到动态变化的效果。
+````
+animation: play3 2s steps(36) infinite;
+@keyframes play3 {
+    from { background-position: 0px;}
+      to { background-position: -7200px;}
+}
+````
+
+前端对网页进行标记可以通过对url的操作,然后在每一次加载页面的时候对页面的地址进行判断：
+````
+window.location.href = "http://m.bendi.163.com/fps/frontends/local_special/new_year/index.html?currentNum=" + currentNum;
+
+/* 判断网页是否为回流状态 */
+var query = location.search.substring(1);
+var urlArr = query.split('&');
+var resNum;
+for(var i = 0;i < urlArr.length;i++){
+    if(urlArr[i].match('currentNum')){
+        resNum = urlArr[i].split('=')[1];
+        $('#toChangeFont').html('查看').parent().removeClass('shareEvent').addClass('locationEvent');
+        var imgUrl = 'http://nos.netease.com/fps-pro/frontends/local_special/new_year/img/'+resNum+'.jpg';
+        $('#keyImg').attr('src',imgUrl);
+        $('#wrapper').css('transform','rotateY('+ 180 +'deg)');
+        console.log(resNum);
+    }
+}
+````
