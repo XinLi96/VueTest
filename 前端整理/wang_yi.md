@@ -219,3 +219,100 @@ for(var i = 0;i < urlArr.length;i++){
     }
 }
 ````
+微信h5获取微信用户信息：
+````
+var GLOBLE_PARAMS = (function () {
+    var args = {};
+    var query1 = location.search.substring(1);
+
+    var pairs = query1.split("&"); // Break at ampersand
+    for(var i = 0; i < pairs.length; i++) {
+        var pos = pairs[i].indexOf('=');
+        if (pos == -1) continue;
+        var argname = pairs[i].substring(0,pos);
+        var value = pairs[i].substring(pos+1);
+        value = decodeURIComponent(value);
+        args[argname] = value;
+    }
+    return args;
+})();
+var GLOBLE_ACTION_ID = 483;//公众账号信息可替换
+var userInfo = {};
+function getUser(){
+    var code = "";
+    if(GLOBLE_PARAMS["code"]){
+        code = GLOBLE_PARAMS["code"];
+    }
+    if( localStorage.getItem("token")){
+    }else{
+        if(!code || code === ""){
+            var url = window.location.href;//加载页面的地址
+            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa50c7134ab27bf7f&redirect_uri=" + encodeURIComponent(url) + "&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect";
+        }else{
+            $.ajax({
+                type : "get",
+                dataType : "jsonp",
+                data : {
+                    appId : "wxa50c7134ab27bf7f",//公众账号可替换
+                    code : code,
+                    isAuth : true
+                },
+                url: "http://game.house.163.com/web/user/wx/init2",
+                success : function(ret) {
+                    userInfo = ret;
+                    // alert(userInfo.nickname);
+                },
+                error:function(){
+                    alert(arguments);
+                    for(var i = 0;i < arguments.length;i++){
+                        alert(arguments[i]);
+                    }
+                }
+            });
+        }
+    }
+}
+getUser();
+````
+
+JSON.parse()和JSON.stringify()：
+* parse用于从一个字符串中解析出json对象
+````
+//注意：单引号写在{}外，每个属性名都必须用双引号，否则会抛出异常。
+var str = '{"name":"huangxiaojian","age":"23"}';
+JSON.parse(str)
+Object
+    age: "23"
+    name: "huangxiaojian"
+    __proto__: Object
+````
+* stringify()用于从一个对象解析出字符串
+````
+var a = {a:1,b:2};
+JSON.stringify(a)
+"{"a":1,"b":2}"
+````
+
+移动端页面使用audio的自动播放的时候会不好使(在移动端需要有交互才能播放音乐)：
+````
+//移动端自动播放音频的解决方法
+<audio src="bg.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>  
+
+
+function audioAutoPlay(id){  
+    var audio = document.getElementById(id),  
+        play = function(){  
+            audio.play();  
+            document.removeEventListener("touchstart",play, false);  
+        };  
+    audio.play();  
+    document.addEventListener("WeixinJSBridgeReady", function () { //微信端打开 
+        play();  
+    }, false);  
+    document.addEventListener('YixinJSBridgeReady', function() {  //易信端打开
+        play();  
+    }, false);  
+    document.addEventListener("touchstart",play, false);  //touchstart事件
+}  
+audioAutoPlay('Jaudio');  
+````
