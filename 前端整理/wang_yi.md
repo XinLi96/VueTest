@@ -316,3 +316,17 @@ function audioAutoPlay(id){
 }  
 audioAutoPlay('Jaudio');  
 ````
+
+全局变量不能通过 delete 操作符删除，而直接在 window 对象上的定义的属性可以。
+````
+var age = 29;
+window.color = "red";
+//在 IE < 9 时抛出错误，在其他所有浏览器中都返回 false
+delete window.age;
+//在 IE < 9 时抛出错误，在其他所有浏览器中都返回 true
+delete window.color; //returns true
+alert(window.age); //29
+alert(window.color); //undefined
+````
+
+客户端检测方法：能力检测、怪癖检测、用户代理检测（使用的权重由大到小）。
