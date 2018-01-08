@@ -340,3 +340,31 @@ alert(window.color); //undefined
 > 主要好处就是可以消除对象间的耦合，通过使用工程方法而不是new关键字。将所有实例化的代码集中在一个位置防止代码重复。
 * 构造函数模式
 > 使用构造函数的方法 ，即解决了重复实例化的问题 ，又解决了对象识别的问题
+
+函数防抖和函数节流？
+* 函数防抖是指频繁触发的情况下，只有足够的空闲时间，才执行代码一次
+````
+//函数防抖
+var timer = false
+document.getElementById("debounce").onScroll = function() {
+        clearTimeout(timer)  
+        timer = setTimeout(function(){
+            console.log(‘函数防抖’) 
+  }, 300)     
+}
+````
+* 函数节流是指一定时间内js方法只跑一次
+````
+//函数节流
+var canScroll = true;
+document.getElementById('throttle').onScroll = function() {
+    if (!canScroll) {
+        return;
+    }
+    canScroll = false;
+    setTimeout(function(){
+        console.log('函数节流');
+        canScroll = true;
+    },300)       
+}
+````
