@@ -368,3 +368,4 @@ document.getElementById('throttle').onScroll = function() {
     },300)       
 }
 ````
+判断网页是不是微信客户端浏览器打开的：可以通过获取navigator.userAgent，看其得到的字符串中是否包含micromessenger字段。
