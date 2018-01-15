@@ -369,3 +369,5 @@ document.getElementById('throttle').onScroll = function() {
 }
 ````
 判断网页是不是微信客户端浏览器打开的：可以通过获取navigator.userAgent，看其得到的字符串中是否包含micromessenger字段。
+
+不支持 innerHTML 的元素有： <col> 、 <colgroup> 、<frameset> 、 <head> 、 <html> 、 <style> 、 <table> 、 <tbody> 、 <thead> 、 <tfoot> 和 <tr> 。
