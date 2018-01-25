@@ -371,3 +371,49 @@ document.getElementById('throttle').onScroll = function() {
 判断网页是不是微信客户端浏览器打开的：可以通过获取navigator.userAgent，看其得到的字符串中是否包含micromessenger字段。
 
 不支持 innerHTML 的元素有： <col> 、 <colgroup> 、<frameset> 、 <head> 、 <html> 、 <style> 、 <table> 、 <tbody> 、 <thead> 、 <tfoot> 和 <tr> 。
+
+使用canvas和input实现图片上传并预览（转成base64并进行压缩）：
+````
+var distSrc;
+var imgSrc = document.getElementById('imgOrigin');//获取上传图片的input框
+$('#imgOrigin').change(function(){//监控上传的图片是否变化
+    var file = this.files[0];//获取上传的图片
+
+    var img_this = new Image();
+    img_this.src = window.URL.createObjectURL(file);//获取上传图片的地址此次是用于画在canvas上
+    $('.uploadIcon').eq(0).attr('src',window.URL.createObjectURL(file));//实现预览效果，固定大小的预览效果
+    console.log(img_this);
+    var ctx = $('.huaban')[0].getContext('2d');//获取画板
+    img_this.onload = function(){
+        var width = img_this.width;
+        var height = img_this.height;
+        $('.huaban').eq(0).attr('width',width+'px').attr('height',height+'px');
+        ctx.drawImage(img_this,0,0,width,height,0,0,width,height);
+        distSrc = $('.huaban')[0].toDataURL("image/jpeg",0.3);//利用canvas将图片转成base64并且压缩，后面的参数范围为0-1，越小画质越低
+        $('.uploadIcon').attr('src',distSrc);
+
+        var reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=function(){
+            // var distSrc = this.result;
+            $.ajax({//后台上传的接口
+                url: "url",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    picdata: distSrc
+                },
+                success: function(data) {
+                    //上传成功的返回信息
+                },
+                error: function(e) {
+                    alert('图片合成失败，请重新上传');
+                }
+                
+            });
+        }
+
+    }
+});
+````
+在前端利用url传递信息标志时，可能会遇到我们所要传递的参数是中文，如果直接进行拼接会变成乱码不能正常获取，在拼接之前先使用encode将中文进行转码，在获取的地方使用decode进行译码，这样就可以成功传递了！！！
