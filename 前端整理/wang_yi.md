@@ -421,3 +421,9 @@ $('#imgOrigin').change(function(){//监控上传的图片是否变化
 给子元素设置margin-top的时候父元素也会向下移动的解决方法：
 * 使用padding-top
 * 给父元素加over-flow:hidden;
+
+在设计稿宽度大于640或750的时候需要对pc端和移动端都自适应：
+````
+<meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width={设计稿宽度},user-scalable=no" />
+在每一个背景上都设置background: url() center center no-repeat;属性
+````
