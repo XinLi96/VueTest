@@ -6,6 +6,7 @@
     <title>美食管理</title>
     <link rel="stylesheet" href="./link/bootstrap.min.css">
     <link rel="stylesheet" href="./link/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://nos.netease.com/fps-pro/frontends/libs/swiper/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
@@ -31,23 +32,62 @@
     </div>
 
     <div class="content">
-        <div class="lbImg">
-
+        <div class="lbImg swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/1.jpg" class="lbOne" alt=""></div>
+                <div class="swiper-slide"><img src="./img/2.jpg" class="lbOne" alt=""></div>
+                <div class="swiper-slide"><img src="./img/3.jpg" class="lbOne" alt=""></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
         <div class="foodList">
-            
+            <div class="foodListOne">
+                <div class="listOneLeft">
+                    <img src="./img/1.jpg" alt="">
+                </div>
+                <div class="listOneRight">
+                    菜名：XXX<br>
+                    作者：XXX<br>
+                    日期：2018-01-01<br>
+                    点击量：512
+                </div>
+            </div>
+            <div class="foodListOne">
+                <div class="listOneLeft">
+                    <img src="./img/2.jpg" alt="">
+                </div>
+                <div class="listOneRight">
+                    菜名：XXX<br>
+                    作者：XXX<br>
+                    日期：2018-01-01<br>
+                    点击量：512
+                </div>
+            </div>
+            <div class="foodListOne">
+                <div class="listOneLeft">
+                    <img src="./img/3.jpg" alt="">
+                </div>
+                <div class="listOneRight">
+                    菜名：XXX<br>
+                    作者：XXX<br>
+                    日期：2018-01-01<br>
+                    点击量：512
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="row">
-            <div class="col-xs-3 headGao">首页</div>
-            <div class="col-xs-3 headGao">留言板</div>
+            <div class="col-xs-3 headGao"><a href="index.html">首页</a></div>
+            <div class="col-xs-3 headGao"><a href="message.html">留言板</a></div>
             <div class="col-xs-3 headGao">小视频</div>
             <div class="col-xs-3 headGao">个人</div>
         </div>
     </div>
     <script src="http://nos.netease.com/fps-pro/frontends/libs/jquery/jquery-2.2.4.min.js"></script>
+    <script src="http://nos.netease.com/fps-pro/frontends/libs/swiper/swiper-3.4.2.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
