@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+ol,ul{
+    list-style: none;
+}
+.header{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.headGao{
+    height: 50px;
+    line-height: 50px;
+    background: #6464f7;
+}
+.header .rule{
+    width: 20px;
+    height: 20px;
+}
+.header .add{
+    width: 20px;
+    height: 20px;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.content{
+    margin-top: 50px;
+    height: 1000px;
+    background-color: #cccccc;
+}
+.ruleMask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.ruleCon{
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 80px;
+    text-align: center;
+    border-radius: 10px;
+}
+.toHide{
+    display: none !important;
+}
+.lbImg{
+    
+}
