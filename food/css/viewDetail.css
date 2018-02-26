@@ -72,43 +72,12 @@ ol,ul{
     margin-top: 50px;
     min-height: 1000px;
     /* background-color: #cccccc; */
+    text-align: center;
 }
-.lbOne{
-    width: 100%;
+.foodImg{
+    width: 300px;
+    height: 300px;
 }
-.searchFood{
-    margin-top: 10px;
-}
-.searchFood input{
-    margin-left: 80px;
-}
-.searchFood button{
-    width: 60px;
-    margin-left: 20px;
-}
-.foodList{
-    width: 100%;
-    margin-top: 10px;
-}
-.foodListOne{
-    margin: 0 auto;
-    width: 98%;
-    height: 100px;
-    margin-bottom: 10px;
-}
-.listOneLeft,.listOneRight{
-    float: left;
-    height: 100px;
-}
-.listOneLeft{
-    width: 30%;
-}
-.listOneLeft img{
-    width: 100%;
-    height: 100px;
-}
-.listOneRight{
-    width: 70%;
-    padding-left: 10px;
-    font-size: 18px;
+.foodTeach{
+    text-align: left;
 }
