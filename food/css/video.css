@@ -71,34 +71,11 @@ ol,ul{
 .content{
     margin-top: 50px;
     min-height: 1000px;
-    /* background-color: #cccccc; */
+    background-color: #cccccc;
 }
-.lbOne{
-    width: 100%;
-}
-.foodList{
-    width: 100%;
+.videoListOne{
     margin-top: 20px;
 }
-.foodListOne{
-    margin: 0 auto;
-    width: 98%;
-    height: 100px;
-    margin-bottom: 10px;
-}
-.listOneLeft,.listOneRight{
-    float: left;
-    height: 100px;
-}
-.listOneLeft{
-    width: 30%;
-}
-.listOneLeft img{
+.videoListOne video{
     width: 100%;
-    height: 100px;
-}
-.listOneRight{
-    width: 70%;
-    padding-left: 10px;
-    font-size: 18px;
 }

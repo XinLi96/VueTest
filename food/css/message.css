@@ -70,6 +70,43 @@ ol,ul{
 /* header */
 .content{
     margin-top: 50px;
-    height: 3000px;
-    background-color: #cccccc;
+    height: 1000px;
+    /* background-color: #cccccc; */
+}
+
+.addMessage .addMessageBtn{
+    margin-left: 139px;
+}
+.addMessage input{
+    margin-top: 5px;
+}
+
+.messageList{
+    width: 100%;
+    margin-top: 20px;
+}
+.messageListOne{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 98%;
+    /* height: 100px; */
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    overflow: auto;
+}
+.messageOneLeft,.messageOneRight{
+    float: left;
+    /* height: 100px; */
+}
+.messageOneLeft{
+    width: 30%;
+    font-size: 18px;
+}
+.messageOneRight{
+    width: 70%;
+    padding-left: 10px;
+    font-size: 18px;
+    border-left: 1px dashed #000000;
+    word-break: break-all; 
+    word-wrap:break-word;
 }
