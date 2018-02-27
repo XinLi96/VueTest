@@ -427,3 +427,12 @@ $('#imgOrigin').change(function(){//监控上传的图片是否变化
 <meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width={设计稿宽度},user-scalable=no" />
 在每一个背景上都设置background: url() center center no-repeat;属性
 ````
+
+h5链接：
+* http://home.163.com/special/daren/
+* http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
+* http://m.bendi.163.com/fps/frontends/local_special/new_year/index.html
+* http://m.house.163.com/fps/frontends/house_special/life_zzj/index.html
+* http://m.bendi.163.com/fps/frontends/local_special/38vote/index.html
+* http://m.bendi.163.com/fps/frontends/local_special/bsj_ad/porsche.html
+* http://m.bendi.163.com/fps/frontends/local_special/bsj_ad/audi.html
