@@ -7,7 +7,7 @@ CSS盒模型
 * IE模型的宽和高是content+padding+border
 
 CSS如何设置这两种模型<br>
-* box-sizing：conten-box；用于标准浏览器
+* box-sizing：content-box；用于标准浏览器
 * box-sizing：border-box；用于IE浏览器
 
 Js如何设置获取盒模型对应的宽和高<br>
@@ -41,7 +41,7 @@ BFC或IFC（边距重叠解决方案）<br>
 >BFC的使用场景
 * BFC垂直方向边距重叠
 * BFC不与float元素重叠
-* BFC子元素即使是float也会参与
+* BFC子元素即使是float也会参与父元素高度的计算
 >盒模型中的各部分设百分比都是相对于谁的？
 * width和height的百分比都是相对于父元素的width和height
 * 当父元素的宽度和高度都存在时，margin-left和margin-top是相对于父元素的宽度，margin-top和margin-bottom是相对于父元素的高度；父元素的高度不存在时，都是相对于父元素的宽度
