@@ -12,7 +12,7 @@ netease
 * 日期         d开头
 * 正则类型     r开头
 
-为了避免埋坑，不要使用==、！==，改用===，！==。
+为了避免埋坑，不要使用==、！=，改用===，！==。
 
 禁止使用未声明的变量，引入其它文件定义的全局变量可加window.前缀。
 
@@ -433,6 +433,11 @@ css3执行动画的状态：
 * forwards ：当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）。    
 * backwards：在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。    
 * both：向前和向后填充模式都被应用。
+
+去掉移动点击事件出现阴影：
+* a,img,button,input,textarea,div{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+
+css3和html5的新特性一般ie6/7/8是不支持的。
 
 h5链接：
 * http://home.163.com/special/daren/
