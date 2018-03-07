@@ -439,6 +439,53 @@ css3执行动画的状态：
 
 css3和html5的新特性一般ie6/7/8是不支持的。
 
+meta标签的属性含义：
+* name属性主要用于描述网页，比如网页的关键词，叙述等（keywords(关键字)、description(网站内容的描述)、viewport(移动端的窗口)、 robots(定义搜索引擎爬虫的索引方式)）
+* content中的内容是对name填入类型的具体描述，便于搜索引擎抓取
+
+单例模式：该模式的一个类只有一个实例，即一个类只有一个对象实例。
+````
+//构建单例模式、es5方法
+var CreateDiv = function (html) {
+    this.html = html;
+    this.init();
+};
+
+CreateDiv.prototype.init = function () {
+    var div = document.createElement('div');
+    div.innerHTML = this.html;
+    document.body.appendChild(div);
+};
+
+var ProxySingletonCreateDiv = (function () {
+    var instance;
+    return function (html) {
+        if (!instance) {
+            instance = new CreateDiv(html);
+        }
+        return instance;
+    }
+})();
+
+var a = new ProxySingletonCreateDiv('sven1');
+var b = new ProxySingletonCreateDiv('sven2');
+
+alert(a === b); //true
+
+
+//es6方法
+class Cache {
+  static getInstance() {
+    if (!Cache.instance) {
+      Cache.instance = new Cache();
+    }
+    return Cache.instance;
+  }
+}
+
+var cache = Cache.getInstance();
+````
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
