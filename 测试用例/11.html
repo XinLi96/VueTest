@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ol,ul{
+            list-style: none;
+        }
         #triangle {
             width: 0;
             height: 0;
@@ -11,12 +18,124 @@
             border-left: 70px solid transparent;
             border-right: 70px solid transparent;
         }
+        .container{
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+
+        }
+        .inner{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border: 4px solid #cccccc;
+            margin-left: -4px;
+            margin-top: -4px;
+        }
+        .inner:nth-child(3n+1){
+            margin-left: 0;
+        }
+        .inner:hover{
+            border-color: red;
+            z-index: 2;
+        }
+        
+        .test{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            border: 4px solid #cccccc;
+            box-shadow: 0 0 0 6px red,0 0 0 12px yellow;
+        }
     </style>
 </head>
 <body>
 <div id="triangle"></div>
+
+<div class="test">
+
+</div>
+
+<ul class="container">
+    <li class="inner">1</li>
+    <li class="inner">2</li>
+    <li class="inner">3</li>
+    <li class="inner">4</li>
+    <li class="inner">5</li>
+    <li class="inner">6</li>
+    <li class="inner">7</li>
+    <li class="inner">8</li>
+    <li class="inner">9</li>
+</ul>
+
+
+
+笔试
+来到陌陌的时候首先会先发一套前端的笔试题，很简单。
+
+描述一下标准模式和怪异模式的区别；
+实现一个左边div宽度固定，右边div宽度自适应的布局；
+在Array的原型链上实现array.prototype.inArray的方法；
+<meta name=“viewport” content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">介绍一下各属性是什么含义；
+display: none 和 visibility: hidden的区别；
+还有几道题忘了，总之笔试的题很简单很基础，没什么难度。
+
+一面
+介绍一下自己的项目经历，可以看着自己的简历介绍(用到的技术 + 遇到的技术难点)；
+css的盒模型；
+宽度未知的div如何实现居中，列举所有能实现的方法；
+let const var的区别；
+如何实现数组、对象的深拷贝，列举所有方法；
+typeof undefined? typeof null?
+undefined==undefined、undefined===undefined、null==null、null===null、NaN==NaN、NaN===NaN；
+如何实现类；
+介绍一下单例模式；
+ES5如何实现单例；
+ES6的class如何实现单例；
+多个promise如何实现串联；
+promise的all和race的区别；
+介绍一下async和await；
+介绍一下fetch；
+用过axios吗，知道他如何做请求劫持分发吗；
+Vue如何实现双向数据绑定；
+Vue组件之间如何通信(父->子、子->父、兄弟之间)；
+Vue如何处理数据流(Vuex，EventBus的$emit和$on)；
+Vuex都有哪部分组成(state、mutation、action、getter)；
+Vuex中mutation和action哪一个是处理异步操作的(action)；
+vue-router如何处理’/xxx/a|b|c|d’这样子的路由(/xxx/:id)；
+vue-router‘/xxx/:id’这样子的路由如何获取到id值；
+vue-router如何做路由的跳转(标签&实例方法两种)；
+对工程化有什么了解；
+数据可视化，用过threejs和echarts吗;
+Nodejs大概会到什么程度；
+Nodejs的res.send和res.json的区别；
+你有什么问题吗
+还有一些问题记不太清了，问的很细，就是css->js基础->es6->框架->工程化相关->nodejs，由于我在公司css写的少所以面试官css和布局也问的比较少；
+
+二面
+二面leader说一面面的已经很不错了，二面也没啥要问的了，就聊一聊自己的情况介绍一下这个组的主要工作；
+
+
 <script>
     console.log(0.1 + 0.2);
+    //看一个数组中两个元素和为10的组合 
+    var arr = [1,5,3,6,8,9,4,2];
+    var newArr = arr.sort(function(a,b){ return a-b; })
+    var newArr1 = newArr;
+    var res = [];
+    console.log(newArr);
+    for(var i = 0;i < newArr.length;i++){
+        for(var j = 0;j < newArr.length;j++){
+            if(newArr[i]+newArr[j] === 10){
+                res.push(newArr[i]+','+newArr[j]);
+                newArr.splice(i,1);
+            }
+        }
+    }
+    console.log(res);
 </script>
 </body>
 </html>
