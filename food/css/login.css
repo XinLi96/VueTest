@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul{
+    list-style: none;
+}
+.content{
+    text-align: center;
+    overflow: hidden;
+}
+.content input{
+    margin-top: 20px;
+}
+.mainPart{
+    margin-top: 200px;
+}
+.subBtn,.resBtn{
+    width: 80px;
+    height: 30px;
+}
+.subBtn{
+    margin-right: 30px;
+}

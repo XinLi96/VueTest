@@ -486,6 +486,30 @@ class Cache {
 var cache = Cache.getInstance();
 ````
 
+e.currentTarget和e.target的区别？
+* e.currentTarget指的是注册了事件监听器的对象
+* e.target指的是该对象里的子对象，也是触发这个事件的对象！
+
+判断一个变量是数组还是对象的方法：
+* instanceOf
+* constructor
+* 使用typeof加length属性typeof o.length，对象返回undefined、数组返回number
+
+闭包的应用场景：
+* 使用闭包代替全局变量
+* 函数外或在其他函数中访问某一函数内部的参数
+* 在函数执行之前为要执行的函数提供具体参数
+
+前端路由是直接找到与地址匹配的一个组件或对象并将其渲染出来。改变浏览器地址而不向服务器发出请求有两种方式: 
+* 在地址中加入#以欺骗浏览器，地址的改变是由于正在进行页内导航 
+* 使用H5的window.history功能，使用URL的Hash来模拟一个完整的URL
+
+vue的生命周期：
+* beforeCreate/created
+* beforeMount/mounted
+* beforeUpdate/updated
+* beforeDestroy/destroyed
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
