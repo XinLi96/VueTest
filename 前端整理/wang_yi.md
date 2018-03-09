@@ -510,6 +510,67 @@ vue的生命周期：
 * beforeUpdate/updated
 * beforeDestroy/destroyed
 
+多个promise如何实现串联？
+````
+Promise.all([promises])
+Promise.all([asyncRequest1(region), asyncRequest2(region), asyncRequest3(region), asyncRequest4(region)])
+    .then(function (reses) {
+      resolve(reses);
+    })；
+````
+
+理解和使用Promise.all和Promise.race:
+* Pomise.all:可以将多个Promise实例包装成一个新的Promise实例。成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。
+* Promise.race:Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，不管结果本身是成功状态还是失败状态。
+
+jquery是直接操作dom对象的，vue是通过改变数据再改变视图。
+
+axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端。
+
+axios的特征：
+* 从浏览器中创建 XMLHttpRequest
+* 从 node.js 发出 http 请求
+* 支持 Promise API
+* 拦截请求和响应
+* 转换请求和响应数据
+* 取消请求
+* 自动转换JSON数据
+* 客户端支持防止 CSRF/XSRF
+```
+// get请求
+axios.get('/user?ID=12345')
+.then(function (response) {
+console.log(response);
+})
+.catch(function (error) {
+console.log(error);
+});
+
+//post请求
+axios.post('/user', {
+firstName: 'Fred',
+lastName: 'Flintstone'
+})
+.then(function (response) {
+console.log(response);
+})
+.catch(function (error) {
+console.log(error);
+});
+//执行多个并发请求
+function getUserAccount() {
+return axios.get('/user/12345');
+}
+ 
+function getUserPermissions() {
+return axios.get('/user/12345/permissions');
+}
+axios.all([getUserAccount(), getUserPermissions()])
+.then(axios.spread(function (acct, perms) {
+//两个请求现已完成
+}));
+```
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
