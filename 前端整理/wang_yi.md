@@ -571,6 +571,30 @@ axios.all([getUserAccount(), getUserPermissions()])
 }));
 ```
 
+前端的几种存储方式：
+* cookie
+* localstorage
+* sessionstorage
+* 离线缓存（application cache）:配置mainfest文件分为CACHE MAINFEST、NETWORK、FALLBACK三部分
+> 离线缓存的优点：
+> 1、离线浏览
+> 2、提升页面载入速度
+> 3、降低服务器压力
+* web sql：1、openDatabase 2、transaction 3、executeSql
+* indexedDB
+
+当需要进行大量DOM操作时，尽量使用DocumentFragement，它会让你的应用变的更快！
+```
+<ul id="list"></ul>
+var frag = document.createDocumentFragment();
+for(var x = 0; x < 10; x++) {
+	var li = document.createElement("li");
+	li.innerHTML = "List item " + x;
+	frag.appendChild(li);
+}
+listNode.appendChild(frag);//使用DocumentFragement要比直接对DOM节点操作要快的多
+```
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
