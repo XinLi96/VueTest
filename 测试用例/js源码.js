@@ -135,7 +135,7 @@
             }
     
             // Return just the one element from the set
-            return num < 0 ? this[ num + this.length ] : this[ num ];
+            return num < 0 ? this[ numnum + this.length ] : this[ num ];
         },
     
         // Take an array of elements and push it onto the stack

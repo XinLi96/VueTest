@@ -588,9 +588,9 @@ axios.all([getUserAccount(), getUserPermissions()])
 <ul id="list"></ul>
 var frag = document.createDocumentFragment();
 for(var x = 0; x < 10; x++) {
-	var li = document.createElement("li");
-	li.innerHTML = "List item " + x;
-	frag.appendChild(li);
+    var li = document.createElement("li");
+    li.innerHTML = "List item " + x;
+    frag.appendChild(li);
 }
 listNode.appendChild(frag);//使用DocumentFragement要比直接对DOM节点操作要快的多
 ```
