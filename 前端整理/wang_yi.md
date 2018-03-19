@@ -624,7 +624,10 @@ v-if和v-show的比较：
 
 当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级。
 
-
+Vue源码：对应的目录有compiler（编译模板）、core（vue的核心）、entries（生产打包入口）、platforms（核心模块的平台模块）、server（处理服务端渲染）、sfc（处理单文件.vue）、shared（目录提供全局用到的工具函数）
+* vue实现数据绑定的关键是Object.defineProperty(obj,prop,desciptor);（实现此部分的代码在core/observe下）
+* 数据绑定部分主要关注三个类（observe、dep、watcher）
+* 虚拟dom部分可以看一下core/vdom/create-element.js（比较两个不同的结构树使用的是diff算法）
 
 h5链接：
 * http://home.163.com/special/daren/
