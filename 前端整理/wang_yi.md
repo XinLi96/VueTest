@@ -595,6 +595,37 @@ for(var x = 0; x < 10; x++) {
 listNode.appendChild(frag);//使用DocumentFragement要比直接对DOM节点操作要快的多
 ```
 
+Vue中的Object.freeze()会阻止修改现有的属性，也意味着相应系统无法再追踪变化。
+````
+var obj = {
+  foo: 'bar'
+}
+
+Object.freeze(obj)
+
+new Vue({
+  el: '#app',
+  data: obj
+})
+<div id="app">
+  <p>{{ foo }}</p>
+  <!-- 这里的 `foo` 不会更新！ -->
+  <button @click="foo = 'baz'">Change it</button>
+</div>
+````
+
+v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。
+
+v-if和v-show的比较：
+* v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+* v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+* v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+* v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
+
+当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级。
+
+
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
