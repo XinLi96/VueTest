@@ -629,6 +629,17 @@ Vue源码：对应的目录有compiler（编译模板）、core（vue的核心�
 * 数据绑定部分主要关注三个类（observe、dep、watcher）
 * 虚拟dom部分可以看一下core/vdom/create-element.js（比较两个不同的结构树使用的是diff算法）
 
+HTML 特性是不区分大小写的。所以，当使用的不是字符串模板时，camelCase (驼峰式命名) 的 prop 需要转换为相对应的 kebab-case (短横线分隔式命名)：
+```
+Vue.component('child', {
+  // 在 JavaScript 中使用 camelCase
+  props: ['myMessage'],
+  template: '<span>{{ myMessage }}</span>'
+})
+<!-- 在 HTML 中使用 kebab-case -->
+<child my-message="hello!"></child>
+```
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
