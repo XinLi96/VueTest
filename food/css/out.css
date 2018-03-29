@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.content {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative; }
+  .content .wrapper {
+    width: 50px;
+    height: 50px;
+    color: red;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    /*娴嬭瘯2*/
+    margin-top: -25px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%; }
+  .content a {
+    color: yellow; }
+    .content a:hover {
+      color: #000000; }
+
+/*# sourceMappingURL=out.css.map */

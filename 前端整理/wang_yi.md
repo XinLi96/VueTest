@@ -640,6 +640,11 @@ Vue.component('child', {
 <child my-message="hello!"></child>
 ```
 
+由于JavaScript的限制，Vue不能检测以下变动的数组：
+* 1、当你利用索引直接设置一个项时，例如：vm.items[indexOfItem] = newValue
+* 2、当你修改数组的长度时，例如：vm.items.length = newLength
+* 还有就是Vue不能检测对象属性的添加或删除
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html

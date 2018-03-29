@@ -1,0 +1,33 @@
+$my-color: red;
+$f-color: #ffffff;
+
+@mixin yq{
+    border-radius: 50%;
+}
+
+.content{
+    width: 100px;
+    height: 100px;
+    background-color: $my-color;
+    position: relative;
+    .wrapper{
+        width: 50px;
+        height: 50px;
+        color: $my-color;
+        background-color: $f-color;
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;//测试1
+        top: 50%;/*测试2*/
+        margin-top: -25px;
+        text-align: center;
+        line-height: 50px;
+        @include yq;
+    }
+    a{
+        color: yellow;
+        &:hover{
+            color: #000000;
+        }
+    }
+}
