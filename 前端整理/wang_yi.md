@@ -645,6 +645,43 @@ Vue.component('child', {
 * 2、当你修改数组的长度时，例如：vm.items.length = newLength
 * 还有就是Vue不能检测对象属性的添加或删除
 
+图片预加载实时显示加载进度：
+````
+/* 图片预加载 */
+var imgArr = [
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/bg2.jpg',
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/alarm.gif',
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/ts.png',
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/hp.png',
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/hand.png',
+    '//nos.netease.com/fps-pro/frontends/home_special/hp_noise/img/load.gif',
+];
+
+function preLoad(urls, callback){
+    this.urls = urls;
+    this.imgNumbers = urls.length;
+    this.loadImgNumbers = 0;
+    var that = this;
+    for(var i = 0; i < urls.length; i++) {
+        var obj = new Image();
+        obj.src = urls[i];
+        obj.onload = function() {
+            that.loadImgNumbers++;
+            callback(parseInt((that.loadImgNumbers / that.imgNumbers) * 100));
+        }
+    }
+}
+preLoad(imgArr,function(percent){
+    $('.jdNum').text(percent+'%');
+    var kd = percent * 0.01 * 243;
+    $('.jdtCon').width(kd);
+    if(percent == 100){ 
+        $('.loading').addClass('toHide');
+    }
+});
+/* 图片预加载 */
+````
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
