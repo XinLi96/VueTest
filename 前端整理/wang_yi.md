@@ -682,6 +682,8 @@ preLoad(imgArr,function(percent){
 /* 图片预加载 */
 ````
 
+父级元素设置display:table-cell; vertical-align:middle;时，子元素必须是inline元素，如果子元素是inline-block元素可以给这个元素直接加vertical-align:middle;，已达到子元素上下居中于子元素。
+
 h5链接：
 * http://home.163.com/special/daren/
 * http://m.home.163.com/fps/frontends/local_special/cn_vote/index.html
