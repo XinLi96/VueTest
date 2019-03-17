@@ -4,3 +4,4 @@
 * Base64编码
 * 哈希算法（Hash常用MDS和SHA1）
 * 加盐（add salt）
+#### element的分页组件问题：
