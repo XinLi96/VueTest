@@ -45,5 +45,5 @@ BFC或IFC（边距重叠解决方案）<br>
 >盒模型中的各部分设百分比都是相对于谁的？
 * width和height的百分比都是相对于父元素的width和height
 * 当父元素的宽度和高度都存在时，margin-left和margin-top是相对于父元素的宽度，margin-top和margin-bottom是相对于父元素的高度；父元素的高度不存在时，都是相对于父元素的宽度
-* 当父元素的宽度和高度都存在时，padding-left和padding-top是相对于父元素的宽度，padding-top和padding-bottom是相对于父元素的高度；父元素的高度不存在时，都是相对于父元素的宽度
+* 当父元素的宽度和高度都存在时，padding-left和padding-right是相对于父元素的宽度，padding-top和padding-bottom是相对于父元素的高度；父元素的高度不存在时，都是相对于父元素的宽度
 * border不允许设置百分比
