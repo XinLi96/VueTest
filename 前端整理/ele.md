@@ -30,3 +30,4 @@
 }
 </style>
 ````
+#### Css的currentColor值：可以随着字体的颜色变化的值。
