@@ -37,3 +37,38 @@
 * 属性选择器
 * 伪类选择器
 * 伪对象选择器
+
+元素选择器：
+* *选择所有的元素
+* E元素选择器、选择指定的元素
+* #Id id选择器
+* .class 类选择器
+
+关系选择器：
+* E F 包含选择器（选择所有包含在E元素里面的F元素）
+* E>F 子选择器（选择所有作为E元素的子元素F）
+* E+F 相邻选择器（选择紧贴在E元素之后的F元素）
+* E～F 兄弟选择器（选择E元素所有兄弟元素F）
+
+属性选择器：
+* E[att] 选择具有att属性的E元素
+* E[att="val"] 选择具有att属性且属性值等于val的E元素
+* E[att^="val"] 选择具有att属性且属性值为以val开头的字符串的E元素
+* E[att$="val"] 选择具有att属性且属性值为以val结尾的字符串的E元素
+* E[att*="val"]	选择具有att属性且属性值为包含val的字符串的E元素
+
+伪类选择器（常用）：
+* E:link 设置超链接a在未被访问前的样式
+* E:hover 设置元素鼠标在其悬停时的样式
+* E:first-child 匹配父元素的第一个子元素E
+* E:last-child 匹配父元素的最后一个子元素E
+* E:nth-child(n) 匹配父元素的第n个子元素E
+* E:nth-last-child(n) 匹配父元素的倒数第n个子元素E
+* E:not(s) 匹配不含有s选择符的元素E
+
+伪对象选择器：
+* E:before/E::before 在目标元素E的前面插入的内容（content）
+* E:after/E::after 在目标元素E的后面插入的内容（content）
+* E:first-letter/E::first-letter 设置元素内的第一个字符的样式
+* E:first-line/E::first-line 设置元素内的第一行的样式
+* E::placeholder 设置元素文字占位符的样式
