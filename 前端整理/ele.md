@@ -72,3 +72,8 @@
 * E:first-letter/E::first-letter 设置元素内的第一个字符的样式
 * E:first-line/E::first-line 设置元素内的第一行的样式
 * E::placeholder 设置元素文字占位符的样式
+
+### webpack实现代码拆分的方式（分包）：
+* Entry Points：多入口分开打包
+* Prevent Duplication：去重，抽离公共模块和第三方库
+* Dynamic Imports：动态加载
