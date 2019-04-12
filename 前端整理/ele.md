@@ -87,3 +87,15 @@
 * 将不常变化的静态文件抽离
 
 ### 单元测试-Jest
+
+### chrome更改了audio自动播放策略，会导致你的项目有一些自动播放的音频报错而播放不出来，报错提示为“Uncaught (in promise) DOMException”
+解决方式：
+* 为自动播放的多媒体增加定时器播放
+* 播放后判断是否报错
+````
+var media = document.getElementById("YourVideo");
+const playPromise = media.play();
+if (playPromise !== null){
+    playPromise.catch(() => { media.play(); })
+}
+````
